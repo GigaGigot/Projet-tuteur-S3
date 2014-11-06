@@ -16,11 +16,11 @@ nav a
 {
 	text-decoration: none;
 	text-align: center;
-	padding: 5% 10%;
+	padding: 5% 15%;
 	display: block;
 	color: white;
 	background: rgba(75,75,75,1);
-    margin : 1% 5%;
+    margin : 2% 5%;
 }   
 
 nav ul a:hover
@@ -75,9 +75,8 @@ body{
 }
 
 .photo_article {
-    display: inline;
-    float: left;
     margin: 2%;
+    margin-left : 20%;
 }
 
 #connexion{
@@ -92,9 +91,10 @@ body{
 }
 
 h1, h2, h3{
-    color : rgba(180,0,0,1);
-    background-color: rgba(150,150,150,1);
+    color : rgb(235, 235, 235);
+    background-color: rgba(216, 33, 33, 0.89);
 }
+
 p {
     text-align: justify;
     font-size : 100%;
@@ -151,4 +151,20 @@ header div {
 
 section {
     padding : 1% 5%;
+}
+
+
+
+#liste>li {
+    margin : 1%;
+}
+
+.valeur {
+    color : red;
+}
+
+
+
+form {
+    margin-left : 10%;
 }
