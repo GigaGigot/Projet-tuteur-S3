@@ -1,0 +1,46 @@
+nous devons comprendre leur activité :
+servir d'intermédiaire pour de la mise en relation entre sources d'informations (structure administrative, organisation, entreprise) pour les possibles consommateurs
+
+
+
+Baser notre action sur l'échelle nationale
+
+
+
+
+Existe-t-il déjà une base de travail à faire évoluer ou doit-on partir de 0?
+
+Quelle est votre vision du projet?
+- Espace en ligne permettant aux différent partenaires de PR2L d'entrer les différentes sources d'archives
+- accessible pour les personnes intéressées (limiter le taux de rebond)
+- adapter l'ergonomie 
+- cartographie des sources, commencer par une étape régionale
+- évolution vers un "musée virtuel"(?) (cf musée national de la fédération nationale de la mutualité française)
+- mettre en place des connecteurs vers des bases externes
+- conforter l'image de l'association par l'esthétique du site
+- faire le tri sur les éléments à garder / jeter sur le site
+
+Quel est notre part dans ce travail? Juste développement? Développement et archivage?
+
+Avez-vous un cahier des charges à nous fournir pour ce projet?
+
+Sous quelle forme seront enregistrées les archives?
+- A voir avec les partenaires de PR2L
+
+Souhaitez vous payer un hébergement externe ou voulez-vous faire l'acquisition d'un serveur?
+- base de donnée externe à plusieurs sources 
+- abonnement 02 switch avec une base de données (un peu "short") actuellement 6€/mois
+
+Est-ce que le portail virtuel doit être sur votre site ou en avoir un nouveau dédié?
+- le site actuel -> actualités (rend compte de l'activité de l'association)
+
+qu est que vous entendez par portail?
+
+
+
+protection sociale des professions de la presse et du monde du spectacle
+
+
+
+Contact PR2L :
+Olivier Dubos 06 89 36 34 57 odubos@gmail.com

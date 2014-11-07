@@ -1,0 +1,11 @@
+avoir une gestion des articles (+ récents en premier)
+	avec une possibilté de rechercher des articles plus ancien
+
+	tiny html => a regarder
+
+fonctionnalités:
+
+	onglet de présentation de l'assos.
+	''  ''  ''  ''  ''  '' des partenaires
+	''  ''  bibliographie pour le livre et les parutions
+	
