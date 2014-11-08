@@ -1,0 +1,13 @@
+Débriefing/Travail à réaliser :
+
+- Réaliser un POC : Une connexion/deconnexion qui stocke l'heure de connexion dans une base de donnée, et affiche "Bonjour Mr/Mme XXX"
+- Envoyer powerpoint du menu, CR & maquettes présentées au client avant le mardi 11
+- Rechercher des informations sur Tiny-HTML (permet de modifier des elements d'HTML pour des personnes non initiées au developpement)
+- Commencer l'analyse avec deux axes :
+	- Gestion Contenu
+		- Contribution
+			- Qui pourra avoir différentes formes, être modifiable
+	- Gestion archives
+- Se renseigner sur les standard (voir BU)
+- Rejoindre le GitHub commun.
+
