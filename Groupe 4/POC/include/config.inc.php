@@ -1,5 +1,5 @@
 <?php
-// Parametres de l'application Covoiturage
+// Parametres de l'application de Connexion
 // A modifier en fonction de la configuration
 
 define('DBHOST', "localhost");

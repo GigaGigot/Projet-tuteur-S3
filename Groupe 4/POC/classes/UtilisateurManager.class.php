@@ -1,11 +1,23 @@
 <?php
+/*
+Cette classe permet de faire les opérations entre la classe utilisateur et la base de données
+variables : la base de données.
+*/
 class UtilisateurManager{
 	private $db;
 	
+    /*
+    Cette fonction permet de construire la classe UtilisateurManager en initialisant la variable db
+    */
 	public function __construct($db){
 		$this->db = $db;
 	}
 	
+    /*
+    Cette fonction permet d'ajouter un utilisateur dans la base de données
+    paramètres : l'instance de la classe utilisateur à ajouter dans la base de données
+    */
+    
 	public function add($utilisateur){
 		$requete = $this->db->prepare('insert into Utilisateur (login,password,nom,prenom) values (:login,:password,:nom,:prenom);');
 		$requete->bindValue(':login', $utilisateur->getLogin());
@@ -16,6 +28,10 @@ class UtilisateurManager{
 		$retour=$requete->execute();
 		return $retour;
 	}
+    
+    /*
+    Cette fonction lit dans la base de données et retourn un tableau d'utilisateur contenant tous les utilisateurs
+    */
 	
 	public function getAllUtilisateur(){
 		$listeUtilisateur = array();

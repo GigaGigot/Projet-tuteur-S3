@@ -5,6 +5,7 @@
 		<ul>
 			<li><a href="index.php?page=1">Connexion</a></li>
 			<li><a href="index.php?page=2">Creation</a></li>
+            <li><a href="index.php?page=3">Test</a></li>
 		</ul>
 	</div>
 </div>

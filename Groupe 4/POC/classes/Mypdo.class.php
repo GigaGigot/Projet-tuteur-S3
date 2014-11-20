@@ -1,4 +1,7 @@
 <?php
+/*
+Cette classe permet de faire la connexion entre l'application et la base de données.
+*/
 class Mypdo extends PDO
 {
 
@@ -6,7 +9,7 @@ class Mypdo extends PDO
 
 	public function __construct ()
 	{
-	 // le paramétrage de cette classe se fait dans le fichier config.inc.php
+	   // le paramétrage de cette classe se fait dans le fichier config.inc.php
 		if (ENV=='dev'){
 			$bool=true;
 		}
