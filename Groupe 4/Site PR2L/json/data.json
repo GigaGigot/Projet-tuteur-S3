@@ -1,0 +1,70 @@
+[
+   {
+      "elements": [
+      {
+        "contenu": "Regroupement d'archives",
+        "type": "Titre"
+      },
+      {
+        "contenu": "Yvan Duvan",
+        "type": "Auteur"
+      },
+      {
+        "contenu": "21/10/2014",
+        "type": "Date"
+      },
+      {
+        "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non nibh consectetur, ullamcorper enim vitae, feugiat metus. Mauris posuere dui neque, at ultricies ligula semper tincidunt. Curabitur scelerisque ultricies ante, ut luctus risus ornare a. Nullam sed urna id dolor iaculis suscipit id id augue. Vestibulum nisi nisl, condimentum sed diam sit amet, lacinia faucibus nisi. Proin quis dignissim turpis. Donec condimentum dui sit amet dapibus porttitor. Morbi non consequat mi, finibus interdum augue. Praesent vestibulum luctus risus quis interdum. Donec hendrerit posuere ligula, sed maximus turpis gravida eu. ",
+        "type": "Paragraphe"
+      },
+      {
+        "contenu": "images/archives1.jpg",
+        "type": "Image"
+      },
+      {
+        "contenu": "images/poinw.png",
+        "type": "Image"
+      },
+      {
+        "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel. ",
+        "type": "Paragraphe"
+      },
+      {
+        "contenu": "http://pr2l.fr/",
+        "type": "Lien"
+      }]
+   },{
+      "elements": [
+      {
+        "contenu": "Réunion urgente",
+        "type": "Titre"
+      },
+      {
+        "contenu": "Yachete Duvan",
+        "type": "Auteur"
+      },
+      {
+        "contenu": "22/10/2014",
+        "type": "Date"
+      },
+      {
+        "contenu": "Fusce tempus nisl vitae nulla tincidunt, sed venenatis nisi venenatis. Suspendisse vel aliquet leo. Nunc scelerisque neque lacus, non dictum ligula varius at. Duis at massa quam. Morbi in sapien sodales, fringilla nisl eget, tincidunt erat. Integer mattis turpis ac neque feugiat, vitae facilisis magna vulputate. In neque nisi, dictum a tellus semper, egestas auctor nisi. Maecenas congue tempus sodales. Sed a neque euismod, malesuada est sed, pellentesque dolor. Nulla facilisi. Vestibulum enim elit, rutrum at malesuada a, dictum ut metus. Praesent nec metus rutrum, convallis lectus sed, venenatis dolor. Mauris volutpat velit sed nulla eleifend, at auctor nisi condimentum. ",
+        "type": "Paragraphe"
+      },
+      {
+        "contenu": "images/poinw.png",
+        "type": "Image"
+      },
+      {
+        "contenu": "images/poinw.png",
+        "type": "Image"
+      },
+      {
+        "contenu": "Vestibulum fringilla justo quam, et. ",
+        "type": "Paragraphe"
+      },
+      {
+        "contenu": "http://pr2l.fr/",
+        "type": "Lien"
+      }]
+   }]

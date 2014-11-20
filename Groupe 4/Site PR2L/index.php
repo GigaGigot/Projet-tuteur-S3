@@ -9,12 +9,12 @@ require_once("include/header.inc.php");
  
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="CMS">
 	<?php	
 		require_once("include/head.inc.php");
 		require_once("include/header.inc.php");
 	?>
-	<body>
+	<body class="cadre" ng-controller="CMSController">
 		<?php
 			require_once("include/moduleNews.inc.php"); 
 			require_once("include/menu.inc.php"); 
