@@ -1,6 +1,7 @@
 <body>
 
 	<?php
+    session_start();
 	if (!empty($_GET["page"])){
 		$page=$_GET["page"];}
 		else
@@ -65,10 +66,10 @@
 		
 // partie intranet
 	case 5:
-		include_once('pages/archives.inc.php');
+		include_once('pages/connexion.inc.php');
 		break;
 	case 501:
-		include_once('pages/Connexion.inc.php');
+		include_once('pages/connexion.inc.php');
 		break;
 	case 502:
 		include_once('pages/Creation.inc.php');

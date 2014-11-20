@@ -1,6 +1,5 @@
 <?php	
-if (is_null($_SESSION["userCourant"]))
-{
+if (is_null($_SESSION["userCourant"])){
     $_SESSION["userCourant"] = NULL;
         
     //Récupération de la liste des utilisateurs

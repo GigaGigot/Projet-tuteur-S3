@@ -49,7 +49,7 @@ class UtilisateurManager{
 	
 	public function getAllUtilisateur(){
 		$listeUtilisateur = array();
-		$sql = 'select * from utlisateur';
+		$sql = 'select * from utilisateur';
 		$requete = $this->db->prepare($sql);
 		$requete->execute();
 		
