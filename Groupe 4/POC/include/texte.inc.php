@@ -24,6 +24,14 @@ case 3:
     break;
 
 case 4:
+    include_once('pages/GestionAdmin.inc.php');
+    break;
+    
+case 5:
+    include_once('pages/Modification.inc.php');
+    break;
+
+case 6:
     include_once('pages/Deconnexion.inc.php');
     break;
 

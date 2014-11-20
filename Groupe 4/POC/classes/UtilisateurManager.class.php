@@ -30,6 +30,19 @@ class UtilisateurManager{
 		return $retour;
 	}
     
+    public function update($utilisateur){
+        $requete = $this->db->prepare('update Utilisateur set login=:login, password=:password, nom=:nom, prenom=:prenom, droits=:droits where idUtilisateur = :id');
+        $requete->bindValue(':id', $utilisateur->getId());
+        $requete->bindValue(':login', $utilisateur->getLogin());
+		$requete->bindValue(':password', $utilisateur->getPassword());
+        $requete->bindValue(':nom', $utilisateur->getNom());
+		$requete->bindValue(':prenom', $utilisateur->getPrenom());
+        $requete->bindValue(':droits', $utilisateur->getDroits());
+		
+		$retour=$requete->execute();
+		return $retour;
+    }
+    
     /*
     Cette fonction lit dans la base de données et retourn un tableau d'utilisateur contenant tous les utilisateurs
     */
