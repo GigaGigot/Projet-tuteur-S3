@@ -40,7 +40,7 @@ nav ul li a {
 	color: rgba(255,255,255,1);
 }
 
-nav ul li {
+nav ul li{
 	display:inline-block;
 	border: 2px solid grey;
 	border-radius: 15%;
@@ -52,8 +52,10 @@ nav ul li {
 }
 nav ul li:hover{
 	background-color: rgba(170, 46, 43, 0.49);
+/*
 	margin-left: 10px;
 	margin-right: 5px;
+*/
 }
 
 #moduleNews {
@@ -192,7 +194,36 @@ article {
 }
 
 
-nav ul{
-	width: inherit;
-	margin:auto;
+/*///////MENU////////*/
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu-deroulant {
+/* on centre le menu dans la page */
+    text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu-deroulant a {
+    text-decoration: none;
+    display: block;
+	color:#000;
+}
+#menu-deroulant ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
 }
