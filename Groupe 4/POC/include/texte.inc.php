@@ -23,6 +23,10 @@ case 3:
 	include_once('pages/Test.inc.php');
     break;
 
+case 4:
+    include_once('pages/Deconnexion.inc.php');
+    break;
+
 default : 	include_once('pages/accueil.inc.php');
 }
 	

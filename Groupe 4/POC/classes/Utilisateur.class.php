@@ -6,6 +6,7 @@ variables : - l'identifiant de l'utilisateur
             - le mot de passe de l'utilisateur
             - le nom de l'utilisateur
             - le prénom de l'utilisateur
+            - les droits de l'utilisateur
 */
 class Utilisateur {
     private $id;
@@ -13,6 +14,7 @@ class Utilisateur {
     private $password;
     private $nom;
     private $prenom;
+    private $droits;
     
     /*
     Cette fonction permet d'appeler affecte si les valeurs sont bien transmises en paramètre
@@ -41,6 +43,7 @@ class Utilisateur {
                 case 'password': $this->setPassword($valeur);break;
                 case 'nom': $this->setNom($valeur);break;
                 case 'prenom': $this->setPrenom($valeur);break;
+                case 'droits': $this->setDroits($valeur);break;
             }
         }
     }
@@ -91,6 +94,15 @@ class Utilisateur {
     }
     
     /*
+    Cette fonction retourne les droits de l'utilisateur
+    */
+    
+    public function getDroits()
+    {
+        return $this->droits;
+    }
+    
+    /*
     Cette fonction permet de modifier la valeur de l'identifiant de l'utilisateur
     paramètre : la nouvelle valeur de l'identifiant
     */
@@ -138,6 +150,16 @@ class Utilisateur {
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
+    }
+    
+    /*
+    Cette fonction permet de modifier la valeur des droits de l'utilisateur
+    paramètre : la nouvelle valeur des droits
+    */
+    
+    public function setDroits($droits)
+    {
+        $this->droits = $droits;
     }
 }
 ?>

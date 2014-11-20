@@ -1,5 +1,6 @@
 <?php	
-
+if (is_null($_SESSION["userCourant"]))
+{
     //Récupération de la liste des utilisateurs
     $pdo = new Mypdo();
 	$utilisateurManager = new UtilisateurManager($pdo);
@@ -55,6 +56,11 @@
             echo "Identifiant incorrect";
         }
     }
+}
+else
+{
+    echo "Vous êtes connecté";
+}
 ?>
 
         

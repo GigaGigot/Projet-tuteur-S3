@@ -19,11 +19,12 @@ class UtilisateurManager{
     */
     
 	public function add($utilisateur){
-		$requete = $this->db->prepare('insert into Utilisateur (login,password,nom,prenom) values (:login,:password,:nom,:prenom);');
+		$requete = $this->db->prepare('insert into Utilisateur (login,password,nom,prenom,droits) values (:login,:password,:nom,:prenom,:droits);');
 		$requete->bindValue(':login', $utilisateur->getLogin());
 		$requete->bindValue(':password', $utilisateur->getPassword());
         $requete->bindValue(':nom', $utilisateur->getNom());
 		$requete->bindValue(':prenom', $utilisateur->getPrenom());
+        $requete->bindValue(':droits', $utilisateur->getDroits());
 		
 		$retour=$requete->execute();
 		return $retour;
