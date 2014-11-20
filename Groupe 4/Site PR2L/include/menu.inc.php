@@ -36,6 +36,14 @@
 			</ul>
 		</li>
 		<li><a href="index.php?page=5">INTRANET</a>
+			<ul>
+			<li><a href="index.php?page=501">Connexion</a></li>
+			<li><a href="index.php?page=502">Creation</a></li>
+            <li><a href="index.php?page=503">Gestion des utilisateurs</a></li>
+            <li><a href="index.php?page=504">Modification d'informations</a></li>
+            <li><a href="index.php?page=505">Déconnexion</a></li>
+		</ul>
+
 		</li>
 	</ul>
 </nav></div>

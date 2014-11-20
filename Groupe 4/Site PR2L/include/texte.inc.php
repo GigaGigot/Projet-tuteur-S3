@@ -65,6 +65,22 @@
 		
 // partie intranet
 	case 5:
+		include_once('pages/archives.inc.php');
+		break;
+	case 501:
+		include_once('pages/Connexion.inc.php');
+		break;
+	case 502:
+		include_once('pages/Creation.inc.php');
+		break;
+	case 503:
+		include_once('pages/GestionAdmin.inc.php');
+		break;
+	case 504:
+		include_once('pages/Modification.inc.php');
+		break;
+	case 505:
+		include_once('pages/Deconnexion.inc.php');
 		break;
 
 	default : 	include_once('pages/accueil.inc.php');
