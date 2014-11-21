@@ -2,10 +2,11 @@
 
 	<?php
     session_start();
+if(!(isset($_SESSION["userCourant"]))){$_SESSION["userCourant"]=NULL;}
 	if (!empty($_GET["page"])){
 		$page=$_GET["page"];}
 		else
-		{$page=0;
+		{$page=1;
 		}
 	switch ($page) {
 // partie accueil

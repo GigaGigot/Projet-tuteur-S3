@@ -10,7 +10,7 @@
 <article id="IHSCGT">
 	<h1>L'Institut d'Histoire Sociale CGT Limoges</h1>
 	<a href="http://www.ihs.cgt.fr/">
-		<img src="./image/ihscgt.jpg" id="logoCRESS" class="logoPartenaires">
+		<img src="http://www.irhs-midi-pyrenees.com/img/data/logo_phototheque_ihs.jpg" id="logoCRESS" class="logoPartenaires">
 	</a>
 	<p>L’Institut CGT d’histoire sociale est une association créée en 1982 avec le soutien de la Confédération générale du travail.</p>
 

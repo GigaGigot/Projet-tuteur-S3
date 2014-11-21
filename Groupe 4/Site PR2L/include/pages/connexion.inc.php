@@ -1,4 +1,5 @@
-<?php	
+<?php
+
 if (is_null($_SESSION["userCourant"])){
     $_SESSION["userCourant"] = NULL;
         
@@ -14,7 +15,7 @@ if (is_null($_SESSION["userCourant"])){
     <form id="form" method="post">
         identifiant : <input type=text name="login"></textarea>
         mot de passe : <input type=password name="password"></textarea>
-        <input type=submit value="Valider" onclick="self.location.href='./Creation.inc.php'">
+        <input type=submit value="Valider" onclick="self.location.href='index.php?page=501'">
     </form>
             
     <br/>
