@@ -10,7 +10,6 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styleSite.css" />
 	<link rel="stylesheet" href="css/styleCMS.css" />
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
