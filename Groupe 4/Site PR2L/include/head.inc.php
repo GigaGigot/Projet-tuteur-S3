@@ -9,7 +9,7 @@
 	<link rel="icon" type="image/png" href="/image/iconePR2L.png" />
 
 	<link rel="stylesheet" type="text/css" href="css/styleSite.css" />
-	<link rel="stylesheet" href="css/styleCMS.css" />
+	<link rel="stylesheet" type="text/css" href="css/styleCMS.css" />
 	
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
