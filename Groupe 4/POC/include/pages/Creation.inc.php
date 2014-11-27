@@ -1,5 +1,4 @@
 <?php
-    session_start();
 if (!(is_null($_SESSION["userCourant"])))
 {
     if ($_SESSION["userCourant"]->getDroits() == "admin")

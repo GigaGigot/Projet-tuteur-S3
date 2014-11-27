@@ -1,5 +1,4 @@
 <?php
-    session_start();
 if (!(is_null($_SESSION["userCourant"])))
 {
     if ($_SESSION["userCourant"]->getDroits() == "admin")
@@ -83,5 +82,13 @@ if (!(is_null($_SESSION["userCourant"])))
             echo "Les droits de cette personne ont été mis à jour";
         }
     }
+    else
+    {
+        echo "Vous n'avez pas accès à cette page";   
+    }
+}
+ else
+{
+    echo "Vous n'êtes pas connecté";   
 }
 ?>
