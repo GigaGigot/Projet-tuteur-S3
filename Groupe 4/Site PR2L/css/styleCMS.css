@@ -63,12 +63,7 @@
 	margin: 5px;
 	padding: 5px;
 	background-color: #EBE8E8;
-}
-
-.validerAnnulerContenu button{
-	position:relative;
-    top:40%; 
-    left:40%;
+    text-align: center;
 }
 
 .boutonEdition{
@@ -97,7 +92,22 @@
 	top:1px;
 }
 
+.selectType select {
+   background: #F5F5F5;
+   width: 200px;
+   padding: 5px;
+   font-size: 16px;
+   border: 0;
+   height: 34px;
+   -webkit-appearance: none;
+}
 
+.selectType {
+   width: 200px;
+   height: 34px;
+   border: 1px solid #ccc;
+   display:inline-block;
+}
 
     /*__Prévisualisation__*/
 .previsualisation{

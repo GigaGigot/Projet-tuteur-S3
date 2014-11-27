@@ -10,9 +10,11 @@
                     <ul  style="list-style-type: none;">
                       <li ng-repeat="element in artCtrl.article.elements" style="margin-bottom:15px;">
                         <a class="boutonEdition" href ng-click="artCtrl.article.elements.splice($index, 1)">X</a>
-                        <select ng-model="element.type" ng-options="types for types in ['Titre', 'Auteur', 'Date', 'Paragraphe', 'Image', 'Lien']">
-                            <option></option>
-                        </select>
+                        <div class="selectType">
+                            <select ng-model="element.type" ng-options="types for types in ['Titre', 'Auteur', 'Date', 'Paragraphe', 'Image', 'Lien']">
+                                <option></option>
+                            </select>
+                        </div>
                         <div ng-switch on="element.type" style="display:inline-block;">
                             <div ng-switch-when="Titre">
                                 <input type="text" ng-model="element.contenu" size="50" required>
