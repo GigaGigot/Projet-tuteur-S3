@@ -1,4 +1,4 @@
-<div class="cmsEntier" ng-controller="TabController as tab">
+<div ng-controller="TabController as tab">
 
 
 			<div class="nonEdition" ng-show="tab.isSet(1)">
@@ -6,49 +6,47 @@
 			</div>
 			<form name="formArticle" class="edition" ng-show="tab.isSet(2)" ng-controller="ArticleController as artCtrl" ng-submit="artCtrl.addArticle(articles)">
 				<!-- Edition -->
-				<div class="contenu">
-		            <div class="zoneContenu">
-					    <ul  style="list-style-type: none;">
-					      <li ng-repeat="element in artCtrl.article.elements" style="margin-bottom:15px;">
-					      	[<a href ng-click="artCtrl.article.elements.splice($index, 1)">X</a>]
-					      	<select ng-model="element.type" ng-options="types for types in ['Titre', 'Auteur', 'Date', 'Paragraphe', 'Image', 'Lien']">
-					      		<option></option>
-					      	</select>
-					      	<div ng-switch on="element.type" style="display:inline-block;">
-					      		<div ng-switch-when="Titre">
-					      			<input type="text" ng-model="element.contenu" size="50" required>
-					      		</div>
-					      		<div ng-switch-when="Auteur">
-					      			<input type="text" ng-model="element.contenu" placeholder="Prénom Nom" required>
-					      		</div>
-					      		<div ng-switch-when="Date">
-					      			<input type="text" ng-model="element.contenu" placeholder="jj/mm/aaaa" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
-					      		</div>
-					      		<div ng-switch-when="Paragraphe">
-					      			<textarea ng-model="element.contenu" placeholder="Saisissez votre texte" ... required></textarea>
-					      		</div>
-					      		<div ng-switch-when="Image">
-					      			<input type="text" ng-model="element.contenu" required>
-					      		</div>
-					      		<div ng-switch-when="Lien">
-					      			<input type="text" ng-model="element.contenu" required>
-					      		</div>
-					      	</div>
-					        <!--<input ng-model="element.contenu"> -->
-					      </li>
-					      <br/>
-					      <li>
-					        [<a href ng-click="artCtrl.article.elements.push({})">Ajouter</a>]
-					      </li>
-					    </ul>
-						
-		            </div>
-				  
-				    <div class="validerAnnulerContenu">
-						<button type="submit" name="valider" href ng-click="tab.check(formArticle.$valid)">Valider</button>
-		          		<button name="annuler" href ng-click="tab.setTab(1)">Annuler</button>
-		            </div>
-	        	</div>
+                <div class="zoneContenu">
+                    <ul  style="list-style-type: none;">
+                      <li ng-repeat="element in artCtrl.article.elements" style="margin-bottom:15px;">
+                        <a class="boutonEdition" href ng-click="artCtrl.article.elements.splice($index, 1)">X</a>
+                        <select ng-model="element.type" ng-options="types for types in ['Titre', 'Auteur', 'Date', 'Paragraphe', 'Image', 'Lien']">
+                            <option></option>
+                        </select>
+                        <div ng-switch on="element.type" style="display:inline-block;">
+                            <div ng-switch-when="Titre">
+                                <input type="text" ng-model="element.contenu" size="50" required>
+                            </div>
+                            <div ng-switch-when="Auteur">
+                                <input type="text" ng-model="element.contenu" placeholder="Prénom Nom" required>
+                            </div>
+                            <div ng-switch-when="Date">
+                                <input type="text" ng-model="element.contenu" placeholder="jj/mm/aaaa" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
+                            </div>
+                            <div ng-switch-when="Paragraphe">
+                                <textarea ng-model="element.contenu" placeholder="Saisissez votre texte ..." required></textarea>
+                            </div>
+                            <div ng-switch-when="Image">
+                                <input type="text" ng-model="element.contenu" required>
+                            </div>
+                            <div ng-switch-when="Lien">
+                                <input type="text" ng-model="element.contenu" required>
+                            </div>
+                        </div>
+                        <!--<input ng-model="element.contenu"> -->
+                      </li>
+                      <br/>
+                      <li>
+                        <a class="boutonEdition" href ng-click="artCtrl.article.elements.push({})">Ajouter</a>
+                      </li>
+                    </ul>
+
+                </div>
+
+                <div class="validerAnnulerContenu">
+                    <button class="boutonEdition" type="submit" name="valider" href ng-click="tab.setTab(1)">Valider</button>
+                    <button class="boutonEdition" type="reset" name="annuler" href ng-click="tab.setTab(1)">Annuler</button>
+                </div>
 
 	        	<!-- Prévisualisation de l'article en cours d'edition -->
 				<div>
@@ -79,6 +77,7 @@
 			</form>
 
 			<!-- Autres articles -->
+            <hr>
 			<div class="article" ng-repeat="article in articles">
 				<div ng-repeat="element in article.elements">
 					<div ng-switch on="element.type">
@@ -102,6 +101,7 @@
 						</div>
 					</div>
 				</div>
+                <hr>
 			</div>
 		</div><h1>Manifestations et actions prévues en 2014 et 2015 </h1>
 <h2>ACTIONS PROGRAMMEES EN 2014-2015</h2>
