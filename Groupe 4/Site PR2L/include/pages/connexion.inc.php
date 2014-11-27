@@ -18,7 +18,7 @@
 <form id="form" method="post">
 	identifiant : <input type=text name="login"><br>
 	mot de passe : <input type=password name="password"><br>
-	<input type=submit value="Valider" onclick="self.location.href='index.php?page=501'">
+	<input type=submit value="Valider" onclick="self.location.href='index.php?page=601'">
 </form><br>
 
 							<?php
