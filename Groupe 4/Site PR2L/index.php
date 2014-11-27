@@ -10,16 +10,29 @@ require_once("include/header.inc.php");
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="CMS">
-	<?php	
-		require_once("include/head.inc.php");
-		require_once("include/header.inc.php");
-	?>
+	
+	<head>
+		<?php require_once("include/head.inc.php"); ?>
+	</head>
+	
+	<header>
+		<?php require_once("include/header.inc.php"); ?>
+	</header>
+	
+	<aside>
+		<?php require_once("include/moduleNews.inc.php"); ?>		
+	</aside>
+	
+	<nav>
+		<?php require_once("include/menu.inc.php"); ?>
+	</nav>
+	
 	<body class="cadre" ng-controller="CMSController">
-		<?php
-			require_once("include/moduleNews.inc.php"); 
-			require_once("include/menu.inc.php"); 
-			require_once("include/texte.inc.php");
-			require_once("include/footer.inc.php");
-		?>
+			<?php require_once("include/texte.inc.php"); ?>
 	</body>
+	
+	<footer>
+			<?php require_once("include/footer.inc.php"); ?>
+	</footer>
+		
 </html>

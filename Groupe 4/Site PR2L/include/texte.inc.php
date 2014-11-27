@@ -1,6 +1,5 @@
-<body>
-
-	<?php
+<section>
+<?php
     session_start();
 if(!(isset($_SESSION["userCourant"]))){$_SESSION["userCourant"]=NULL;}
 	if (!empty($_GET["page"])){
@@ -126,5 +125,4 @@ if(!(isset($_SESSION["userCourant"]))){$_SESSION["userCourant"]=NULL;}
 	default : 	include_once('pages/accueil.inc.php');
 	}
 	?>
-	
-</body>
+</section>
