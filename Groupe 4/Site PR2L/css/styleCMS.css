@@ -93,8 +93,8 @@
 }
 
 .selectType select {
-   background: #F5F5F5;
-   width: 200px;
+   background: transparent;
+   width: 220px;
    padding: 5px;
    font-size: 16px;
    border: 0;
@@ -105,10 +105,13 @@
 .selectType {
    width: 200px;
    height: 34px;
+   margin-bottom:-13px;
+   overflow: hidden;
    border: 1px solid #ccc;
+   background: url(../image/down_arrow_select.jpg) no-repeat right #ddd;
    display:inline-block;
 }
-
+    
     /*__Prévisualisation__*/
 .previsualisation{
 	border: 1px solid grey;
