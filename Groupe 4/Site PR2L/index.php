@@ -20,7 +20,6 @@ require_once("include/header.inc.php");
 	</header>
 	
 	<aside>
-		<?php require_once("include/moduleNews.inc.php"); ?>
 		<?php require_once("include/contact.inc.php"); ?>		
 	</aside>
 	
