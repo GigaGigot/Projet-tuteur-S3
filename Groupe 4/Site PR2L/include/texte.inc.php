@@ -103,22 +103,22 @@ if(!(isset($_SESSION["userCourant"]))){$_SESSION["userCourant"]=NULL;}
 		break;
 		
 // partie intranet
-	case 5:
+	case 6:
 		include_once('pages/connexion.inc.php');
 		break;
-	case 501:
+	case 601:
 		include_once('pages/connexion.inc.php');
 		break;
-	case 502:
+	case 602:
 		include_once('pages/Creation.inc.php');
 		break;
-	case 503:
+	case 603:
 		include_once('pages/GestionAdmin.inc.php');
 		break;
-	case 504:
+	case 604:
 		include_once('pages/Modification.inc.php');
 		break;
-	case 505:
+	case 605:
 		include_once('pages/Deconnexion.inc.php');
 		break;
 
