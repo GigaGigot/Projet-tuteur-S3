@@ -1,4 +1,3 @@
-
 	<h1>Actualités</h1>
 	<ul>
 		<li><a href="index.php?page=203#ParutionLivre" class="lienNews">Parution : "L’économie sociale. Histoire d’hier, patrimoine pour demain du Limousin à l’Europe" </a></li>

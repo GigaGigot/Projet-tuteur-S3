@@ -81,7 +81,7 @@ header em{
 }
 /*		FIN HEADER		*/
 
-/*		MODULE NEWS		*/
+/*		MODULES			*/
 aside {
 	position: fixed;
 	left:10px;
@@ -116,6 +116,9 @@ aside h1{
 	margin:5px;
 	font-size: 20px;
 	color : white;
+}
+aside p{
+	text-align: center;
 }
 /*		FIN MODULE NEWS		*/
 
