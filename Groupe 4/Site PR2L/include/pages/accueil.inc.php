@@ -1,6 +1,19 @@
 <article id="accueil">
 
+	<h1>Présentation de l'association PR2L</h1>
 
+	<img src="./image/presPR2L.jpg" id='imagPres'>
+	<p>L’association PR2L est une association d’intérêt général ouverte à tous qui a pour objectifs :
+		<ul>
+			<li>D’appeler et d’aider à <em>la collecte de documents et archives concernant l’histoire ouvrière, des entreprises et des associations d’économie sociale et des syndicats professionnels</em> en partenariat avec les institutions et organismes intéressés ;</li>
+
+			<li>De <em>promouvoir un programme de sauvegarde et de valorisation de ces documents et archives</em> (guides, numérisation partagée de corpus documentaires ou des enquêtes) en liaison avec les Ministères, les chercheurs et les archivistes professionnels de la conservation (archivistes, bibliothécaires, documentalistes….) ;</li>
+
+			<li>De <em>conduire des projets fédérateurs</em> (colloques, rencontres, séminaires) à l’échelle régionale, nationale et internationale ;</li>
+
+			<li>De <em>contribuer et participer à la diffusion documentaire et pédagogique des ressources collectées disponibles</em>, en utilisant les outils informatiques appropriés.</li>
+		</ul>
+	</p>
 	<h1>Le mot du président</h1>
 
 	<img src="./image/photoMotPres.jpg" id="motPresident">
