@@ -1,3 +1,6 @@
+
+	@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+
 body{
 	margin-left:250px;
 	margin-top:10px;
@@ -73,7 +76,7 @@ nav ul li ul:firstchild{
 /*		FIN MENU		*/
 
 /*		HEADER			*/
-header em{
+.initiales{
 	background-color: #B52B2B;
 	color:white;
 	
@@ -197,9 +200,10 @@ article:target{
 	padding: 15px;
 }
 
-em{
-	text-emphasis-position: above;
-	color:#A40004;
+em {
+	font-style: normal;
+	font-size: 20px;
+	font-family: 'Josefin Sans', sans-serif;
 	
 	border-radius: 5px;
 	padding:2px;
