@@ -121,7 +121,7 @@ switch ($page) {
 	
 	case 602 :
 		
-		include_once ('pages/creationutilisateur.inc.php');
+		include_once ('pages/ajouterPersonne.inc.php');
 		break;
 	case 603 :
 		
@@ -129,7 +129,7 @@ switch ($page) {
 		break;
 	case 604 :
 		
-		include_once ('pages/modificationinfo.inc.php');
+		include_once ('pages/ModifierPersonne.inc.php');
 		break;
 	case 605 :
 		include_once ('pages/Deconnexion.inc.php');

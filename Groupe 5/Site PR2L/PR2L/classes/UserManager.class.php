@@ -12,7 +12,7 @@ class UserManager {
 	 * @return code retour de la requete
 	 */
 	public function add($user) {
-		//var_dump ( $user );
+		// var_dump ( $user );
 		$requete = $this->db->prepare ( 'INSERT INTO user 
 		(user_login, user_mdp, user_nom, user_prenom, user_tel, user_email, user_adherent, user_typeCompte, user_roles, user_derniereConnexion) 
 		VALUES 
@@ -27,7 +27,7 @@ class UserManager {
 		$requete->bindValue ( ':user_typeCompte', $user->getUserTypeCompte () );
 		$requete->bindValue ( ':user_roles', $user->getUserRoles () );
 		
-		//var_dump($requete);
+		// var_dump($requete);
 		$retour = $requete->execute ();
 		return $retour;
 	}
@@ -201,6 +201,29 @@ class UserManager {
 		} else {
 			return null;
 		}
+	}
+	
+	/**
+	 * Retoure une personne selon son user_id
+	 * 
+	 * @param int $idPersonne        	
+	 * @return Personne|NULL
+	 */
+	public function getPersonneParId($idPersonne) {
+		$sql = "SELECT * FROM user WHERE user_id=:user_id";
+		$requete = $this->db->prepare ( $sql );
+		$requete->bindValue ( ':user_id', $idPersonne );
+		
+		$requete->execute ();
+		$resultat = $requete->fetch ( PDO::FETCH_OBJ );
+		
+		if ($resultat != null) {
+			return new User( $resultat );
+			// On retourne un objet Personne
+		} else {
+			return null;
+		}
+		$requete->closeCursor ();
 	}
 	
 	// TODO
