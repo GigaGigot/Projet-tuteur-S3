@@ -54,6 +54,9 @@ switch ($page) {
 		
 		include ("pages/autourdevous.inc.php");
 		break;
+	case 204 : 
+		include ("pages/ajouterArticle.inc.php");
+		break;
 	//
 	// Partenaires
 	//

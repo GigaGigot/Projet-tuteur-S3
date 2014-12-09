@@ -1,1 +1,0 @@
-update personne set per_pwd ='7cfde796db3789d359515455299439b146c7cfb7' 
