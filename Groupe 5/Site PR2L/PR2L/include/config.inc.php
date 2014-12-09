@@ -2,7 +2,7 @@
 // Paramï¿½tres de l'application Covoiturage
 // A modifier en fonction de la configuration
 define ( 'DBHOST', "localhost" );
-define ( 'DBNAME', "Covoiturage" );
+define ( 'DBNAME', "pr2l" );
 define ( 'DBUSER', "root" );
 define ( 'DBPASSWD', "" );
 define ( 'SEL', '48@!alsd' );

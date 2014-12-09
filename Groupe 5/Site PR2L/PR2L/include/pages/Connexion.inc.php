@@ -1,6 +1,6 @@
 <?php
 $pdo = new Mypdo ();
-$personneManager = new PersonneManager ( $pdo );
+$userManager = new UserManager ( $pdo );
 
 $nb1 = rand ( 1, 9 );
 $nb2 = rand ( 1, 9 );
@@ -11,9 +11,10 @@ if (empty ( $_POST ['reponse'] )) {
 <h1>Pour vous connecter</h1>
 
 <form action="#" method="post">
-	<label for=per_login'>Login : </label><input type="text"
-		name="per_login" id="per_login"> <br /> <label for='per_pwd'>Mot de
-		passe : </label><input type="password" name="per_pwd" id="per_pwd"> <br />
+	<label for=user_login'>Login : </label><input type="text"
+		name="user_login" id="user_login"> <br /> <label for='user_mdp'>Mot de
+		passe : </label><input type="password" name="user_mdp" id="user_mdp">
+	<br />
 
 	<p class="captcha">
 		Merci de r&eacute;soudre le calcul suivant pour confirmer que vous
@@ -36,11 +37,11 @@ if (empty ( $_POST ['reponse'] )) {
 	
 	$reponse = $_POST ['reponse']; // réponse utilisateur
 	
-	$login = $_POST ['per_login'];
-	$pass = $_POST ['per_pwd'];
+	$login = $_POST ['user_login'];
+	$pass = $_POST ['user_mdp'];
 	// détails de la connexion
 	
-	$connexionOK = $personneManager->testConnexion ( $login, $pass );
+	$connexionOK = $userManager->testConnexion ( $login, $pass );
 	
 	if ($reponse != $resultat) { // si le captcha est incorrect
 		echo "<img src=\"image/erreur.png\" alt='erreur' /> <strong>Le captcha est incorrect</strong>\n";
@@ -73,20 +74,20 @@ if (empty ( $_POST ['reponse'] )) {
 	}
 	
 	if (($connexionOK == true) && $captcha == true) { // le captcha est bon et les id/mdp aussi
-		$_SESSION ['per_login_connecte'] = $_POST ['per_login'];
-		$personneConnectee = $personneManager->getPersonneParLogin ( $_SESSION ['per_login_connecte'] );
-		$_SESSION ["per_num_connecte"] = ($personneConnectee->getPerNum ());
-		$_SESSION ["per_prenom_connecte"] = ($personneConnectee->getPrenomPersonne ());
-		// var_dump ( $personneConnectee );
-		// echo "<script type='text/javascript'>document.location.replace('./index.php');</script>";
+		$_SESSION ['user_login_connecte'] = $_POST ['user_login'];
+		$personneConnectee = $userManager->getPersonneParLogin ( $_SESSION ['user_login_connecte'] );
+		$_SESSION ["user_id_connecte"] = ($personneConnectee);
+		$_SESSION ["user_prenom_connecte"] = ($personneConnectee->getUserPrenom ());
+		
 		?>
-		<h3> Bienvenue <?php echo $_SESSION ["per_prenom_connecte"] ?> ! Vous allez &ecirc;tre redirig&eacute;...</h3>
-		<META HTTP-EQUIV="Refresh" CONTENT="2;URL=index.php">
+		<h3> Bienvenue <?php echo $_SESSION ["user_prenom_connecte"] ?> ! Vous allez &ecirc;tre redirig&eacute;...</h3>
+		<META HTTP-EQUIV="Refresh" CONTENT="2;URL=index.php"> <!-- Redirection vers la page d'accueil. -->
 		<?php
 		/*
-		 * Au final, on dispose de 3 variable de sessions : 1 pour les conditions si on est connecte :
-		 * per_login_connecte
-		 * et deux autres, qui contiennent le numero et le prenom de la personne connnecte
+		 * Au final, on dispose de 3 variables de sessions : 1 pour les conditions si on est connecte :
+		 * user_login_connecte
+		 * et deux autres, qui contiennent le numero et le prenom de la personne connnecte <br/>
+		 * Une variable de session est conservée jusqu'à fermeture du navigateur.
 		 */
 	}
 }
