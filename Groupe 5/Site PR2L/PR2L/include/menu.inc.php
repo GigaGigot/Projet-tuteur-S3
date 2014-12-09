@@ -10,7 +10,7 @@
 			</ul>
 		</li>
 		<li>
-			<a href="index.php?page=2">ACTUALITES</a> 
+			<a href="index.php?page=2">ACTUALITES</a>
 			<ul>
 				<li><a href="index.php?page=201">Action / Evènements</a></li>
 				<li><a href="index.php?page=202">Quoi de neuf?</a></li>

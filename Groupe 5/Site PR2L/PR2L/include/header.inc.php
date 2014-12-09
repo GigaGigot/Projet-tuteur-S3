@@ -22,4 +22,5 @@ $title = "Bienvenue sur le site du Pôle international de Ressources de Limoges 
 		<div id="entete">
 			
 		</div>
+		
 	</div>

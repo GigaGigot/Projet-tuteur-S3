@@ -6,86 +6,137 @@ if (! empty ( $_GET ["page"] )) {
 	$page = 0;
 }
 switch ($page) {
-	//
-	// Personnes
-	//
 	
-	case 0 :
-		// inclure ici la page accueil photo
+	//
+	// PR2L
+	//
+	case 1 :
 		include_once ('pages/accueil.inc.php');
 		break;
-	// page insertion nouveau client
-	case 1 :
-		// inclure ici la page insertion nouvelle personne
-		include ("pages/ajouterPersonne.inc.php");
+	
+	case 101 :
+		
+		include ("pages/projet.inc.php");
 		break;
 	
-	case 2 :
-		// inclure ici la page liste des personnes
-		include_once ('pages/listerPersonnes.inc.php');
+	case 102 :
+		
+		include_once ('pages/fondateurs.inc.php');
 		break;
-	case 3 :
-		// inclure ici la page modification des personnes
-		include ("pages/ModifierPersonne.inc.php");
+	case 103 :
+		
+		include ("pages/revuepresse.inc.php");
 		break;
-	case 4 :
-		// inclure ici la page suppression personnes
-		include_once ('pages/supprimerPersonne.inc.php');
+	case 104 :
+		
+		include_once ('pages/adhererassociation.inc.php');
+		break;
+	case 105 :
+		include_once ('pages/vieassociation.inc.php');
 		break;
 	//
-	// Parcours
+	// Actualités
+	//
+	case 2 :
+		include_once ('pages/actualites.inc.php');
+		break;
+	
+	case 201 :
+		
+		include ("pages/action_evenement.inc.php");
+		break;
+	
+	case 202 :
+		
+		include_once ('pages/quoideneuf.inc.php');
+		break;
+	case 203 :
+		
+		include ("pages/autourdevous.inc.php");
+		break;
+	//
+	// Partenaires
+	//
+	case 3 :
+		include_once ('pages/partenaires.inc.php');
+		break;
+	
+	case 301 :
+		
+		include ("pages/gererpartenaires.inc.php");
+		break;
+	//
+	// Ressources
+	//
+	case 4 :
+		include_once ('pages/ressources.inc.php');
+		break;
+	
+	case 401 :
+		
+		include ("pages/cataloguearchives.inc.php");
+		break;
+	
+	case 402 :
+		
+		include_once ('pages/bibliotheques.inc.php');
+		break;
+	case 403 :
+		
+		include ("pages/travauxrecherche.inc.php");
+		break;
+	case 404 :
+		
+		include_once ('pages/publications.inc.php');
+		break;
+	case 405 :
+		include_once ('pages/liensutiles.inc.php');
+		break;
+	//
+	// Chantiers
 	//
 	case 5 :
-		// inclure ici la page ajouter parcours
-		include ("pages/ajouterParcours.inc.php");
+		include_once ('pages/chantiers.inc.php');
 		break;
 	
+	case 501 :
+		
+		include ("pages/recencementmutualite.inc.php");
+		break;
+	case 502 :
+		
+		include ("pages/inventairecoopération.inc.php");
+		break;
+	//
+	// Intranet
+	//
 	case 6 :
-		// inclure ici la page liste des parcours
-		include ("pages/listerParcours.inc.php");
-		break;
-	//
-	// Villes
-	//
-	
-	case 7 :
-		// inclure ici la page ajouter ville
-		include ("pages/ajouterVille.inc.php");
+		include_once ('pages/intranet.inc.php');
 		break;
 	
-	case 8 :
-		// inclure ici la page lister ville
-		include ("pages/listerVilles.inc.php");
-		break;
-	
-	//
-	// Trajets
-	//
-	case 9 :
-		// inclure ici la page proposer trajet
+	case 601 :
 		
-		include_once ('pages/ProposerTrajet.inc.php');
-		break;
-	case 10 :
-		// inclure ici la page rechercher trajet
-		
-		include_once ('pages/ChercherTrajet.inc.php');
-		
+		include ("pages/Connexion.inc.php");
 		break;
 	
-	case 11 :
-		// inclure ici la page de connexion
-		include_once ('pages/Connexion.inc.php');
+	case 602 :
+		
+		include_once ('pages/creationutilisateur.inc.php');
 		break;
-	
-	case 12 :
-		// inclure ici la page de d�connexion
+	case 603 :
+		
+		include ("pages/gestionutilisateur.inc.php");
+		break;
+	case 604 :
+		
+		include_once ('pages/modificationinfo.inc.php');
+		break;
+	case 605 :
 		include_once ('pages/Deconnexion.inc.php');
 		break;
-	
+
 	default :
 		include_once ('pages/accueil.inc.php');
 }
-
 ?>
 </div>
