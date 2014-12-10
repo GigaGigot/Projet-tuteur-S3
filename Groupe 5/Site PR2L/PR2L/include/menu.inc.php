@@ -15,6 +15,7 @@
 				<li><a href="index.php?page=201">Action / Evènements</a></li>
 				<li><a href="index.php?page=202">Quoi de neuf?</a></li>
 				<li><a href="index.php?page=203">Autour de nous?</a></li>
+				<li><a href="index.php?page=204">Ajouter un article</a></li>
 			</ul>
 		</li>
 		

@@ -25,14 +25,14 @@ switch ($page) {
 		break;
 	case 103 :
 		
-		include ("pages/revuepresse.inc.php");
+		include ("pages/revuePresse.inc.php");
 		break;
 	case 104 :
 		
-		include_once ('pages/adhererassociation.inc.php');
+		include_once ('pages/adhererAssociation.inc.php');
 		break;
 	case 105 :
-		include_once ('pages/vieassociation.inc.php');
+		include_once ('pages/vieAssociation.inc.php');
 		break;
 	//
 	// Actualités
@@ -43,16 +43,16 @@ switch ($page) {
 	
 	case 201 :
 		
-		include ("pages/action_evenement.inc.php");
+		include ("pages/actionEvenement.inc.php");
 		break;
 	
 	case 202 :
 		
-		include_once ('pages/quoideneuf.inc.php');
+		include_once ('pages/quoiDeNeuf.inc.php');
 		break;
 	case 203 :
 		
-		include ("pages/autourdevous.inc.php");
+		include ("pages/autourDeVous.inc.php");
 		break;
 	case 204 : 
 		include ("pages/ajouterArticle.inc.php");
@@ -66,7 +66,7 @@ switch ($page) {
 	
 	case 301 :
 		
-		include ("pages/gererpartenaires.inc.php");
+		include ("pages/gererPartenaires.inc.php");
 		break;
 	//
 	// Ressources
@@ -77,7 +77,7 @@ switch ($page) {
 	
 	case 401 :
 		
-		include ("pages/cataloguearchives.inc.php");
+		include ("pages/catalogueArchives.inc.php");
 		break;
 	
 	case 402 :
@@ -86,14 +86,14 @@ switch ($page) {
 		break;
 	case 403 :
 		
-		include ("pages/travauxrecherche.inc.php");
+		include ("pages/travauxRecherche.inc.php");
 		break;
 	case 404 :
 		
 		include_once ('pages/publications.inc.php');
 		break;
 	case 405 :
-		include_once ('pages/liensutiles.inc.php');
+		include_once ('pages/liensUtiles.inc.php');
 		break;
 	//
 	// Chantiers
