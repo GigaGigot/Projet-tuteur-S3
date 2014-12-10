@@ -7,9 +7,12 @@ $listeUsers = $userManager->getAllUsers ();
 ?>
 
 <?php
-if (! empty ( $_SESSION ['per_login_connecte'] && $_SESSION['typeCompte_connecte']=='Administrateur')) {
-	// condition de connexion
-	?>
+if (! empty ( $_SESSION ['personne_connecte'] )) {
+	if ($_SESSION['personne_connecte']->getUserTypeCompte()=='Administrateur') {
+		// condition de connexion, seul un administrateur peut modifier des utilisateurs.
+		?>
+
+		
 
 
 <?php
@@ -18,7 +21,7 @@ if (! empty ( $_SESSION ['per_login_connecte'] && $_SESSION['typeCompte_connecte
 		?>
 <p>
 	D&eacute;sol&eacute;, aucun utilisateur n'est enregistr&eacute;. <br />
-	<strong><a href='index.php?page=1'>Ajouter un utilisateur ?</a></strong>
+	<a href='index.php?page=2'>Ajouter un utilisateur ?</a>
 <?php
 	} else { // Des personnes sont enregistrées
 		?>
@@ -49,37 +52,40 @@ if (! empty ( $_SESSION ['per_login_connecte'] && $_SESSION['typeCompte_connecte
 			?>
 <form action="#" method="POST">
 	<label for='per_nom'>Nom :</label> <input name='per_nom' id='per_nom'
-		type='text' value="<?php echo $user->getUserNom();?>" required /> <label
-		for='per_prenom'>Prenom : </label> <input name='per_prenom'
-		id='per_prenom' type='text'
-		value='<?php echo $user->getUserPrenom(); ?>' required /> <br /> <label
-		for='per_tel'>T&eacute;l&eacute;phone : </label> <input name='per_tel'
-		id='per_tel' type='text' value='<?php echo $user->getUserTel(); ?>'
-		required /> <label for='per_mail'> Mail :</label> <input
-		name='per_mail' id='per_mail' type='text'
-		value='<?php echo $user->getUserEmail(); ?>' required /> <br /> <label
-		for='per_login'>Login :</label> <input name='per_login' id='per_login'
-		type='text' value='<?php echo $user->getUserLogin(); ?>' required /> <label
-		for='typeCompte'>Type de compte :</label> <select name='typeCompte'
-		id='typeCompte'>
-		<option>Adh&eacute;rent</option>
-		<option>Contributeur</option>
-		<option>Mod&eacute;rateur</option>
-		<option>Administrateur</option>
-	</select> <label for='roles'> Fonction de l'utilisateur :</label> <select
-		name='roles' id='roles'>
-		<option>Secr&eacute;taire</option>
-		<option>Directeur</option>
-	</select> <label for='isAdherent'>Adh&eacute;rent :</label> <input
-		type='radio' name='isAdherent' value='oui' checked='checked' />Oui <input
-		type='radio' name='isAdherent' value='non' />Non <label for='user_mdp'>Mot
-		de passe actuel :</label> <input name='user_mdp' id='user_mdp'
-		type='password' value='' /> <br />
+		type='text' value="<?php echo $user->getUserNom();?>" required />
+	<label for='per_prenom'>Prenom : </label> 
+		<input name='per_prenom' id='per_prenom' type='text' value='<?php echo $user->getUserPrenom(); ?>' required /> <br /> 
+	<label for='per_tel'>T&eacute;l&eacute;phone : </label> 
+		<input name='per_tel' id='per_tel' type='text' value='<?php echo $user->getUserTel(); ?>' required /> 
+	<label for='per_mail'> Mail :</label> 
+		<input name='per_mail' id='per_mail' type='text' value='<?php echo $user->getUserEmail(); ?>' required /> <br />
+	<label for='per_login'>Login :</label> 
+		<input name='per_login' id='per_login' type='text' value='<?php echo $user->getUserLogin(); ?>' required /> 
+	<label for='typeCompte'>Type de compte :</label> 
+		<select name='typeCompte' id='typeCompte'>
+			<option><?php $user->getUserTypeCompte();?></option> 
+			<option>Adh&eacute;rent</option>
+			<option>Contributeur</option>
+			<option>Mod&eacute;rateur</option>
+			<option>Administrateur</option>
+		</select> 
+	<label for='roles'> Fonction de l'utilisateur :</label> 
+		<select name='roles' id='roles'>
+			<option><?php $user->getUserRoles();?> </option>
+			<option>Secr&eacute;taire</option>
+			<option>Directeur</option>
+		</select> 
+	<label for='isAdherent'>Adh&eacute;rent :</label> 
+		<input type='radio' name='isAdherent' value='o' checked='checked' />Oui 
+		<input type='radio' name='isAdherent' value='n' />Non 
+	<label for='user_mdp'>Mot de passe actuel :</label> 
+		<input name='user_mdp' id='user_mdp' type='password' value='' /> <br />
 	<!-- On saisie deux fois afin d'être sur que la user saississe le bon mdp-->
-	<label for='per_nouveau'>Nouveau mot de passe : </label> <input
-		name='per_nouveau' id='per_nouveau' type='password' value='' /> <label
-		for='per_confirmation'>Retaper le mot de passe :</label> <input
-		name='per_confirmation' id='per_confirmation' type='password' value='' />
+	<label for='per_nouveau'>Nouveau mot de passe : </label> 
+		<input name='per_nouveau' id='per_nouveau' type='password' value='' /> 
+	<label for='per_confirmation'>Retaper le mot de passe :</label> 
+		<input name='per_confirmation' id='per_confirmation' type='password' value='' />
+	
 	<br /> <input type='submit' value='Modifier' />
 </form>
 <?php
@@ -117,11 +123,19 @@ if (! empty ( $_SESSION ['per_login_connecte'] && $_SESSION['typeCompte_connecte
 					echo "<img src=\"image/erreur.png\" alt='erreur' /> Mot de passe incorrect.";
 				}
 			}
-		}
-	}
-} else {
+		} //fin update user
+	} //fin des personne sont enregistrees
+}else { //fin condition de connexion administrateur
 	?>
-<p>Vous n'&ecirc;tes pas connecte
+<p>Vous devez &ecirc;tre connect&eacute; en tant qu'administrateur pour pouvoir acc&eacute;der 
+aux donn&eacute;es de tous les utilisateurs</p>
+	<?php
+
+}
+} else { //fin condition de connexion 
+	?>
+<p>Vous devez &ecirc;tre connect&eacute; en tant qu'administrateur pour pouvoir acc&eacute;der 
+aux donn&eacute;es de tous les utilisateurs</p>
 	<?php
 
 }

@@ -1,4 +1,4 @@
-<div id="menu-deroulant"><nav>
+<center><div id="menu-deroulant"><nav>
 	<ul >
 		<li><a href="index.php?page=1">PR2L</a> 
 			<ul >
@@ -45,7 +45,7 @@
 		<li><a href="index.php?page=6">INTRANET</a>
 			<ul >
 				<li><a href="index.php?page=601">Connexion</a></li>
-				<li><a href="index.php?page=602">Creation</a></li>
+				<li><a href="index.php?page=602">Ajout d'un utilisateur</a></li>
 	            <li><a href="index.php?page=603">Gestion des utilisateurs</a></li>
 	            <li><a href="index.php?page=604">Modification d'informations</a></li>
 	            <li><a href="index.php?page=605">Déconnexion</a></li>
@@ -53,3 +53,4 @@
 		</li>
 	</ul>
 </nav></div>
+</center>
