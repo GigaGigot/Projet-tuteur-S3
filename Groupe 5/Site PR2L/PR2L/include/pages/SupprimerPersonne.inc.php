@@ -1,31 +1,29 @@
 <h1>Supprimer des personnes enregistr&eacute;es</h1>
 <?php
 $pdo = new Mypdo ();
-$personneManager = new PersonneManager ( $pdo );
-$listePersonnes = $personneManager->getAllPersonnes ();
+$userManager = new UserManager ( $pdo );
+$listeUsers = $userManager->getAllUsers();
 
-// var_dump ( $listePersonnes );
-if ($listePersonnes == null) { // Pas de personnes enregistrées
+// var_dump ( $listeUsers );
+if ($listeUsers == null) { // Pas de personnes enregistrées
 	?>
 <p>
 	D&eacute;sol&eacute;, aucune personne n'est enregistr&eacute;e. <br />
 	<strong><a href='index.php?page=1'>Ajouter une personne ?</a></strong>
 <?php
 } else { // Des personnes sont enregistrées
-	
-	if (empty ( $_POST ['per_num'] )) {
+
+	if (empty ( $_POST ['per_num'] )) { //la personne n'est pas selectionnee
 		?>
-
-
 
 <form action="#" method="POST">
 	Personne &agrave; supprimer : <select class='champ' name="per_num"
 		id="per_num">
 	<?php
-		
-		foreach ( $listePersonnes as $personne ) {
+
+		foreach ( $listeUsers as $personne ) {
 			?>
-		<option value="<?php echo $personne->getPerNum(); ?>"><?php echo $personne->getNomPersonne()." ".$personne->getPrenomPersonne(); ?></option>
+		<option value="<?php echo $personne->getUserId(); ?>"><?php echo $personne->getUserNom()." ".$personne->getUserPrenom(); ?></option>
 		<?php
 		}
 		?>
@@ -33,20 +31,18 @@ if ($listePersonnes == null) { // Pas de personnes enregistrées
 </form>
 <?php
 	} else {
-		$personneManager->supprimerPersonne ( $_POST ['per_num'] );
-		if (! empty ( $_SESSION ['per_login_connecte'] )) {
+		$userManager->supprimerUser ( $_POST ['per_num'] );
+		if (! empty ( $_SESSION ['personne_connecte'] )) {
 			// une personne est connectée.
-			if (($_SESSION ["per_num_connecte"] == $_POST ['per_num'])) {
+			if (($_SESSION ["personne_connecte"]->getUserId() == $_POST ['per_num'])) {
 				// Alors, la personne supprimée est la personne connectée.
 				session_destroy ();
 				// on quitte la session.
 			}
 		}
-		// TOOD img a afficher
 		?>
-
 <p>
-	<img src="image/valid.png" alt='valid' /> Personne supprim&eacute;e
+	<img src="image/valid.png" alt='valid' /> Utilisateur supprim&eacute;
 </p>
 <?php
 	}

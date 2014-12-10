@@ -34,6 +34,9 @@ switch ($page) {
 	case 105 :
 		include_once ('pages/vieAssociation.inc.php');
 		break;
+	case 106 :
+		include_once ('pages/leMotDuPresident.inc.php');
+		break;
 	//
 	// Actualités
 	//
@@ -54,7 +57,7 @@ switch ($page) {
 		
 		include ("pages/autourDeVous.inc.php");
 		break;
-	case 204 : 
+	case 204 :
 		include ("pages/ajouterArticle.inc.php");
 		break;
 	//
@@ -132,12 +135,12 @@ switch ($page) {
 		break;
 	case 604 :
 		
-		include_once ('pages/ModifierPersonne.inc.php');
+		include_once ('pages/modifierInfoUtilisateurConnecte.inc.php');
 		break;
 	case 605 :
 		include_once ('pages/Deconnexion.inc.php');
 		break;
-
+	
 	default :
 		include_once ('pages/accueil.inc.php');
 }

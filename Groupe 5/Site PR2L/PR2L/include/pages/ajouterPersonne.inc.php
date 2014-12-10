@@ -1,13 +1,9 @@
 <?php
-// OK
 $pdo = new Mypdo ();
-// On instancie tous les manager dont on aura besoin
 $PersonneManager = new UserManager ( $pdo );
 ?>	
 
 <?php
-// Si l'un des champs est vide, cela veut dire que le formulaire de saisie de la personne n'est pas complet,
-// donc on affiche le formulaire de saisie d'une personne
 if ((empty ( $_POST ['nom'] ))) // formulaire non rempli.
 {
 	?>
@@ -15,30 +11,33 @@ if ((empty ( $_POST ['nom'] ))) // formulaire non rempli.
 
 <div id='user'>
 	<form name='ajouter_user' id='ajouter_user' action='#' method='post'>
-		<label for='nom'>Nom : </label> <input type='text'
-			placeholder='Ex : Rossard' name='nom' required> <label for='prenom'>Pr&eacute;nom
-			: </label><input type='text' placeholder='Ex : Sarah' name='prenom'
-			required> <br /> <label for='tel'>T&eacute;l&eacute;phone : </label><input
-			type='text' placeholder='0xxxxxxxxx' name='tel' pattern='[0][0-9]{9}'
-			required> <label for='mail'>Mail :</label> <input type='mail'
-			placeholder='sarah.michu@example.fr' name='mail' required /> <br /> <label
-			for='login'>Login :</label> <input type='text'
-			placeholder='Ex : Sarah87' name='login' required> <label for='mdp'>Mot
-			de passe :</label> <input type='password' placeholder='********'
-			name='mdp' required /> <br /> <label for='typeCompte'>Type de compten
-			:</label> <select name='typeCompte' id='typeCompte'>
-			<option>Adh&eacute;rent</option>
-			<option>Contributeur</option>
-			<option>Mod&eacute;rateur</option>
-			<option>Administrateur</option>
-		</select> <label for='roles'> Fonction de l'utilisateur :</label> <select
-			name='roles' id='roles'>
-			<option>Secr&eacute;taire</option>
-			<option>Directeur</option>
-		</select> <br /> <label for='isAdherent'>Adh&eacute;rent :</label> <input
-			type='radio' name='isAdherent' value='oui' checked='checked' />Oui <input
-			type='radio' name='isAdherent' value='non' />Non <br /> <input
-			type='submit' value='Valider'>
+		<label for='nom'>Nom : </label> <input type='text' placeholder='Ex : Rossard' name='nom' required> 
+		<label for='prenom'>Pr&eacute;nom : </label>
+			<input type='text' placeholder='Ex : Sarah' name='prenom' required> <br /> 
+		<label for='tel'>T&eacute;l&eacute;phone : </label>
+			<input type='text' placeholder='0xxxxxxxxx' name='tel' pattern='[0][0-9]{9}' required> 
+		<label for='mail'>Mail :</label> 
+			<input type='mail' placeholder='sarah.michu@example.fr' name='mail' required /> <br /> 
+		<label for='login'>Login :</label> 
+			<input type='text' placeholder='Ex : Sarah87' name='login' required> 
+		<label for='mdp'>Mot de passe :</label> 
+			<input type='password' placeholder='********' name='mdp' required /> <br /> 
+		<label for='typeCompte'>Type de compte :</label> 
+			<select name='typeCompte' id='typeCompte'>
+				<option>Adh&eacute;rent</option>
+				<option>Contributeur</option>
+				<option>Mod&eacute;rateur</option>
+				<option>Administrateur</option>
+			</select> 
+		<label for='roles'> Fonction de l'utilisateur :</label> 
+			<select name='roles' id='roles'>
+				<option>Secr&eacute;taire</option>
+				<option>Directeur</option>
+			</select> <br /> 
+		<label for='isAdherent'>Adh&eacute;rent :</label> 
+			<input type='radio' name='isAdherent' value='o' checked='checked' />Oui 
+			<input type='radio' name='isAdherent' value='n' />Non <br /> 
+		<input type='submit' value='Valider'>
 	</form>
 </div>
 <?php
@@ -55,23 +54,24 @@ if ((empty ( $_POST ['nom'] ))) // formulaire non rempli.
 			'user_typeCompte' => $_POST ['typeCompte'],
 			'user_roles' => $_POST ['roles'],
 			'user_adherent' => $_POST ['isAdherent'] 
-	) ); // Details de la personne stockée dans une variable
+	) ); // Details de l'utilisateur stocké dans une variable
 	$Personne->setUserMdp ( sha1 ( sha1 ( $Personne->getUserMdp () ) . SEL ) );
-	// Grain de sel du mot de passe.
+	// Grain de sel du mot de passe. 
+	// TODO modifier cryptage du mot de passe (sha255?)
+
+	//$_SESSION ['Personne'] = $Personne;
 	
-	// Même pas besoin de $_SESSION ['Personne'] = $Personne; ?
-	
-	$idUser = $PersonneManager->VerifLogin ( $Personne->getUserLogin () ); // on teste si le login de la personne existe déjà
-	                                                                       // var_dump($idUser);
-	if ($idUser == null) { // le login n'existe pas déjà
+	$idUser = $PersonneManager->VerifLogin ( $Personne->getUserLogin () );
+	// on teste si le login de la personne existe dÃ©jÃ 
+
+	if ($idUser == null) { // le login n'existe pas dÃ©jÃ 
 		$retour = $PersonneManager->add ( $Personne );
 	} else {
-		// le login existe déjà
+		// le login existe dÃ©jÃ 
 		$retour = null;
 		?>
 <p>
-	<img src=\ "image/erreur.png
-		\" alt='erreur' /> Ce login est d&eacute;j&agrave; utilis&eacute;,
+	<img src="image/erreur.png" alt='erreur' /> Ce login est d&eacute;j&agrave; utilis&eacute;,
 	merci d'en choisir un autre.
 </p>
 <br />

@@ -1,8 +1,0 @@
-Problème :
-
-- Cryptage 
-- Symphony
-- Dans le POC, lors de l'affichage des données, comment faire en sorte de ne pas afficher ce qu'est l'user ? 
-(cf. gestionutilisateur.inc.php dans POC)
-- CSS dégueulasse
-- BD à modifier pour inclure les droits.

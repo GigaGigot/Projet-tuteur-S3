@@ -1,0 +1,11 @@
+A faire :
+
+- Table User à modifier pour inclure les droits.
+- Une table "Partenaire" étant donné qu'il veulent les gérer, pour en ajouter ou en supprimer
+- Adapter les ajouterUtilisateur et supprimerUtilisateur pour ajouterPartenaire et supprimerPartenaire.
+- Cryptage autre que SHA1 ? 
+- Symphony --> Adapter --> cf. OpenClassRoom et prévoir beaucooooooup de temps...
+- Rendre le site plus attractif visuellement... -> Alexis avec CSS et retouche design
+- Regler le probleme du header/menu/text qui se touche -->visuel moche.
+- Ajouter une colonne à gauche pour les infos. --> Gerer emplacement
+- Gerer quels affichage se font ou non dans le menu en fonction de qui est connecte (cf. POC pour aide)

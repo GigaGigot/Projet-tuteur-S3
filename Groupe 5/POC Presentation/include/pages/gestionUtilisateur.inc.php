@@ -11,12 +11,8 @@ if (! empty ( $_SESSION ['personne_connecte'] )) {
 	if ($_SESSION['personne_connecte']->getUserTypeCompte()=='Administrateur') {
 		// condition de connexion, seul un administrateur peut modifier des utilisateurs.
 		?>
-
-		
-
-
 <?php
-	var_dump ( $listeUsers );
+	//var_dump ( $listeUsers );
 	if ($listeUsers == null) { // Pas de personnes enregistrées
 		?>
 <p>

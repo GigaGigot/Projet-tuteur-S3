@@ -12,7 +12,7 @@ if ($listeUsers == null) { // Pas de personnes enregistrées
 	<strong><a href='index.php?page=1'>Ajouter une personne ?</a></strong>
 <?php
 } else { // Des personnes sont enregistrées
-	
+
 	if (empty ( $_POST ['per_num'] )) { //la personne n'est pas selectionnee
 		?>
 
@@ -20,7 +20,7 @@ if ($listeUsers == null) { // Pas de personnes enregistrées
 	Personne &agrave; supprimer : <select class='champ' name="per_num"
 		id="per_num">
 	<?php
-		
+
 		foreach ( $listeUsers as $personne ) {
 			?>
 		<option value="<?php echo $personne->getUserId(); ?>"><?php echo $personne->getUserNom()." ".$personne->getUserPrenom(); ?></option>
@@ -40,9 +40,7 @@ if ($listeUsers == null) { // Pas de personnes enregistrées
 				// on quitte la session.
 			}
 		}
-		// TOOD img a afficher
 		?>
-
 <p>
 	<img src="image/valid.png" alt='valid' /> Utilisateur supprim&eacute;
 </p>
