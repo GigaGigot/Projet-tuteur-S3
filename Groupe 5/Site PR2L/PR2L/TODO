@@ -1,16 +1,15 @@
 A faire :
 
-- Table User à modifier pour inclure les droits.
-- Une table "Partenaire" étant donné qu'il veulent les gérer, pour en ajouter ou en supprimer
+- Une table "Partenaire" étant donné qu'il veulent les gérer, pour en ajouter ou en supprimer ?
 - Adapter les ajouterUtilisateur et supprimerUtilisateur pour ajouterPartenaire et supprimerPartenaire.
-- Cryptage autre que SHA1 ? 
+- Cryptage autre que SHA1 ? --> Détails
 - Symphony --> Adapter --> cf. OpenClassRoom et prévoir beaucooooooup de temps...
 - Rendre le site plus attractif visuellement... -> Alexis avec CSS et retouche design
 - Regler le probleme du header/menu/text qui se touche -->visuel moche.
 - Ajouter une colonne à gauche pour les infos. --> Gerer emplacement
 - Gerer quels affichage se font ou non dans le menu en fonction de qui est connecte (cf. POC pour aide)
 - Angular : gestion des validation de formulaire : http://tomarea.fr/angularjs-validation-dun-formulaire/
-- JS : empecher de saisir des caractère spéciaux dans les formulaire http://www.grafikart.fr/forum/topics/234 (reponse en verte)
+- JS : empecher de saisir des caractère spéciaux dans les formulaire http://www.grafikart.fr/forum/topics/234 (reponse en verte) --> details
 - Angular : gérer le fait de cacher des sections avec angular pour l'ajout d'article.
 
 BIG TUTO ANGULAR : http://www.tinci.fr/blog/apprendre-angular-en-un-jour-le-guide-ultime/
@@ -23,4 +22,29 @@ peu enregistrer des user)
 	Quand on ajoute un user, et que l'on choisit lecture comme droit, si l'on modifie la value dans la source pour
 	remplacer par admin (alors que ça aurait du être lecture), la personne aura des droit admin !
 	Du coup, faire des vérification avant d'ajouter la personne 
+	
+	POST/GET dans url a gérer.
+	gerer droit sur page particuliere pour certaines user en plsu
+	- code HTML a stocker en base 
+	travailler avec le DOM et mettre texte en value
+	
+	Penser a une structure de BD pensee pour la publication avec table
+	le plus gros probleme est la saisie
+	la lecture est juste une lecture de la BD
+	
+	Faire un POC de contribution
+	
+	Premier truc : intégration synmphony
+	
+	tout ce qui est genere HTML pass  dans un "package" tools
+	
+	+++ Gerer tinyHTML +++
+	
+	+1 expert symhpony
+	ensuite integration contribution 
+	
+	maquette présenter au clietn de contribution -- template ?
+	
+	prevoir un slide avec les questions a leur poser et leur montrer le(s) POC
+	modele classe a presenter au client	
 	
