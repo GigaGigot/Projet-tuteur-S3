@@ -14,9 +14,9 @@ class UserManager {
 	public function add($user) {
 		// var_dump ( $user );
 		$requete = $this->db->prepare ( 'INSERT INTO user 
-		(user_login, user_mdp, user_nom, user_prenom, user_tel, user_email, user_adherent, user_typeCompte, user_roles, user_derniereConnexion) 
+		(user_login, user_mdp, user_nom, user_prenom, user_tel, user_email, user_adherent, user_typeCompte, user_roles, user_derniereConnexion, user_droit) 
 		VALUES 
-		(:user_login, :user_mdp, :user_nom, :user_prenom, :user_tel, :user_email, :user_adherent, :user_typeCompte, :user_roles, now());' );
+		(:user_login, :user_mdp, :user_nom, :user_prenom, :user_tel, :user_email, :user_adherent, :user_typeCompte, :user_roles, now(), :droit);' );
 		$requete->bindValue ( ':user_login', $user->getUserLogin () );
 		$requete->bindValue ( ':user_mdp', $user->getUserMdp () );
 		$requete->bindValue ( ':user_nom', $user->getUserNom () );
@@ -26,6 +26,7 @@ class UserManager {
 		$requete->bindValue ( ':user_adherent', $user->getUserAdherent () );
 		$requete->bindValue ( ':user_typeCompte', $user->getUserTypeCompte () );
 		$requete->bindValue ( ':user_roles', $user->getUserRoles () );
+		$requete->bindValue (':droit', $user->getUserDroit());
 		
 		// var_dump($requete);
 		$retour = $requete->execute ();
@@ -98,7 +99,8 @@ class UserManager {
 	 * Prise en compte du cryptage du mot de passe. <br/>
 	 *
 	 * @param char $login        	
-	 * @param char $mdp        	
+	 * @param char $mdp
+	 * 		Mot de passe en clair !
 	 * @return boolean
 	 */
 	public function testConnexion($login, $mdp) {
@@ -107,7 +109,7 @@ class UserManager {
 		$requete = $this->db->prepare ( $sql );
 		$requete->bindValue ( ':login', $login );
 		$requete->bindValue ( ':mdp', (sha1 ( sha1 ( $mdp ) . SEL )) );
-		
+		//var_dump($login);var_dump($mdp);var_dump($requete);var_dump(sha1 ( sha1 ( $mdp ) . SEL ));
 		$requete->execute ();
 		$resultat = $requete->fetch ( PDO::FETCH_OBJ );
 		
@@ -152,7 +154,6 @@ class UserManager {
 	
 	/**
 	 * Permet de modifier un utilisateur, en modifiant tous ses champs sauf son id et sa date de dernière connexion.
-	 * <br/>
 	 * $user ne doit contenir aucun champ vide.
 	 *
 	 * @param User $user        	
@@ -160,14 +161,14 @@ class UserManager {
 	 */
 	public function modifierUser($user) {
 		$requete = $this->db->prepare ( "UPDATE user SET user_prenom=:prenom, user_nom=:nom,
-		user_tel=:tel, user_mail=:mail,
+		user_tel=:tel, user_email=:mail,
 		user_mdp=:pwd, user_login=:login, user_adherent=:adherent, user_typeCompte=:typeCompte, user_roles=:roles
 		WHERE user_id = :user_id" );
 		
 		$requete->bindValue ( ':nom', $user->getUserNom () );
 		$requete->bindValue ( ':prenom', $user->getUserPrenom () );
 		$requete->bindValue ( ':tel', $user->getUserTel () );
-		$requete->bindValue ( ':mail', $user->getUserMail () );
+		$requete->bindValue ( ':mail', $user->getUserEmail() );
 		$requete->bindValue ( ':login', $user->getUserLogin () );
 		$requete->bindValue ( ':pwd', $user->getUserMdp () );
 		$requete->bindValue ( ':adherent', $user->getUserAdherent () );
@@ -188,7 +189,7 @@ class UserManager {
 	 * @return User|NULL
 	 */
 	public function getPersonneParLogin($login) {
-		$sql = "SELECT user_id, user_nom, user_prenom, user_tel, user_mail, user_login, user_mdp FROM user WHERE user_login=:login";
+		$sql = "SELECT * FROM user WHERE user_login=:login";
 		$requete = $this->db->prepare ( $sql );
 		$requete->bindValue ( ':login', $login );
 		
@@ -226,44 +227,44 @@ class UserManager {
 		$requete->closeCursor ();
 	}
 	
-	// TODO
-	// /!\
-	// Fonctions de Sebastien à reprendre/commenter pour pouvoir les utiliser correctement.
-	// /!\
-	public function getUserNom($user_login, $user_mdp) {
-		$sql = 'select * from user where user_login=' . $user_login . ' and user_mdp = ' . $user_mdp . ')';
-		$requete = $this->db->prepare ( $sql );
-		$requete->execute ();
-		$resultat = $requete->fetch ( PDO::FETCH_OBJ );
-		return $resultat;
-	}
-	public function getUserIdCorrespondant($user_login, $user_mdp) {
-		$requete = $this->db->prepare ( "SELECT user_id FROM user WHERE
-		user_login = :user_login and user_mdp = :user_mdp" );
-		$requete->bindValue ( ':user_login', $user_login );
-		$requete->bindValue ( ':user_mdp', $user_mdp );
-		$retour = $requete->execute ();
-		$retour = $requete->fetch ( PDO::FETCH_OBJ );
-		return $retour;
-	}
-	public function getUserCorrespondant($user_id) {
-		$requete = $this->db->prepare ( "SELECT * FROM user WHERE
-		user_id = :user_id" );
-		$requete->bindValue ( ':user_id', $user_id );
-		$requete->execute ();
-		$retour = $requete->fetch ( PDO::FETCH_OBJ );
-		return $retour;
-	}
-	public function getUserCorrespondantNb($user_id) {
-		$sql = "SELECT count(*) FROM user WHERE user_id = '" . $user_id;
-		$requete = $this->db->prepare ( $sql );
-		$requete->execute ();
-		$count = 0;
-		while ( $user = $requete->fetch ( PDO::FETCH_OBJ ) ) {
-			$count = $count + 1;
-		}
-		$requete->closeCursor ();
-		return $count;
-	}
+// 	// TODO
+// 	// /!\
+// 	// Fonctions de Sebastien à reprendre/commenter pour pouvoir les utiliser correctement.
+// 	// /!\
+// 	public function getUserNom($user_login, $user_mdp) {
+// 		$sql = 'select * from user where user_login=' . $user_login . ' and user_mdp = ' . $user_mdp . ')';
+// 		$requete = $this->db->prepare ( $sql );
+// 		$requete->execute ();
+// 		$resultat = $requete->fetch ( PDO::FETCH_OBJ );
+// 		return $resultat;
+// 	}
+// 	public function getUserIdCorrespondant($user_login, $user_mdp) {
+// 		$requete = $this->db->prepare ( "SELECT user_id FROM user WHERE
+// 		user_login = :user_login and user_mdp = :user_mdp" );
+// 		$requete->bindValue ( ':user_login', $user_login );
+// 		$requete->bindValue ( ':user_mdp', $user_mdp );
+// 		$retour = $requete->execute ();
+// 		$retour = $requete->fetch ( PDO::FETCH_OBJ );
+// 		return $retour;
+// 	}
+// 	public function getUserCorrespondant($user_id) {
+// 		$requete = $this->db->prepare ( "SELECT * FROM user WHERE
+// 		user_id = :user_id" );
+// 		$requete->bindValue ( ':user_id', $user_id );
+// 		$requete->execute ();
+// 		$retour = $requete->fetch ( PDO::FETCH_OBJ );
+// 		return $retour;
+// 	}
+// 	public function getUserCorrespondantNb($user_id) {
+// 		$sql = "SELECT count(*) FROM user WHERE user_id = '" . $user_id;
+// 		$requete = $this->db->prepare ( $sql );
+// 		$requete->execute ();
+// 		$count = 0;
+// 		while ( $user = $requete->fetch ( PDO::FETCH_OBJ ) ) {
+// 			$count = $count + 1;
+// 		}
+// 		$requete->closeCursor ();
+// 		return $count;
+// 	}
 }
 ?>

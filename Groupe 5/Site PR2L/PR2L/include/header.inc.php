@@ -17,18 +17,8 @@ $title = "Bienvenue sur le site du Pôle international de Ressources de Limoges 
 
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 
-<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
-<script type="text/javascript">
-tinymce.init({
-	selector: "textarea",
-	plugins: [
-	"advlist autolink lists link image charmap print preview anchor",
-	"searchreplace visualblocks code fullscreen",
-	"insertdatetime media table contextmenu paste moxiemanager"
-			],
-			toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-});
-</script>
+<script src="js/angular.js"></script>
+<script src="js/angular_function.js"></script>
 
 </head>
 <body>

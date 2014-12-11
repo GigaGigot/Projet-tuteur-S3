@@ -9,3 +9,18 @@ A faire :
 - Regler le probleme du header/menu/text qui se touche -->visuel moche.
 - Ajouter une colonne à gauche pour les infos. --> Gerer emplacement
 - Gerer quels affichage se font ou non dans le menu en fonction de qui est connecte (cf. POC pour aide)
+- Angular : gestion des validation de formulaire : http://tomarea.fr/angularjs-validation-dun-formulaire/
+- JS : empecher de saisir des caractère spéciaux dans les formulaire http://www.grafikart.fr/forum/topics/234 (reponse en verte)
+- Angular : gérer le fait de cacher des sections avec angular pour l'ajout d'article.
+
+BIG TUTO ANGULAR : http://www.tinci.fr/blog/apprendre-angular-en-un-jour-le-guide-ultime/
+- Pour l'ajout dynamique : http://angularpourlesnuls.blogspot.fr/
+
+- Pour l'ajout d'article : gérer sans passer par les post, mais en faisant des onclick JS-Angular
+- Pour l'ajout d'article : gérer les retour a la ligne.
+- gros probleme à régler quand on aura un moment : (mais gros problème géré pour l'instant, car seul un admin 
+peu enregistrer des user)
+	Quand on ajoute un user, et que l'on choisit lecture comme droit, si l'on modifie la value dans la source pour
+	remplacer par admin (alors que ça aurait du être lecture), la personne aura des droit admin !
+	Du coup, faire des vérification avant d'ajouter la personne 
+	

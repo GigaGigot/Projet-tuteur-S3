@@ -9,7 +9,7 @@ $nb2 = rand ( 1, 9 );
 if (empty ( $_POST ['reponse'] )) {
 	//On rentre les id de connexion
 	?>
-<h1>Pour vous connecter</h1>
+<h1>Se connecter</h1>
 
 <form action="#" method="post">
 	<label for=user_login'>Login : </label>

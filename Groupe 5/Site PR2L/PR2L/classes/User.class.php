@@ -34,6 +34,8 @@ class User {
 	// listes des rôles : sécrétaire, directeur, ...
 	private $user_derniereConnexion;
 	// Date et heure de dernière connexion
+	private $user_droit;
+	//contient les droit de l'utilisateur pour l'affichage des pages. 
 	public function __construct($valeurs = array()) {
 		if (! empty ( $valeurs )) {
 			$this->affecte ( $valeurs );
@@ -74,6 +76,9 @@ class User {
 					break;
 				case 'user_derniereConnexion' :
 					$this->setUserDerniereConnexion ( $valeurs );
+					break;
+				case 'user_droit' :
+					$this->setUserDroit($valeurs);
 					break;
 			}
 		}
@@ -143,6 +148,12 @@ class User {
 	}
 	public function setUserDerniereConnexion($user_derniereConnexion) {
 		$this->user_derniereConnexion = $user_derniereConnexion;
+	}
+	public function getUserDroit() {
+		return $this->user_droit;
+	}
+	public function setUserDroit($user_droit) {
+		$this->user_droit = $user_droit;
 	}
 }
 ?>

@@ -134,7 +134,7 @@ aux donn&eacute;es de tous les utilisateurs</p>
 }
 } else { //fin condition de connexion 
 	?>
-<p>Vous devez &ecirc;tre connect&eacute; en tant qu'administrateur pour pouvoir acc&eacute;der 
+<p>Vous devez &ecirc;tre connect&eacute; pour pouvoir acc&eacute;der 
 aux donn&eacute;es de tous les utilisateurs</p>
 	<?php
 
