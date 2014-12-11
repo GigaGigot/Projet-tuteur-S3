@@ -21,8 +21,8 @@ if (empty ( $_POST ['per_tel'] )) { //formulaire non rempli
 		<input name='per_login' id='per_login' type='text' value='<?php echo $user->getUserLogin(); ?>' required /> 
 	<label for='roles'> Fonction de l'utilisateur :</label> 
 		<select name='roles' id='roles'>
-			<option>Secr&eacute;taire</option>
-			<option>Directeur</option>
+			<option value='secretaire'>Secr&eacute;taire</option>
+			<option value='directeur'>Directeur</option>
 		</select> 
 	<label for='isAdherent'>Adh&eacute;rent :</label> 
 		<input type='radio' name='isAdherent' value='o' checked='checked' />Oui 

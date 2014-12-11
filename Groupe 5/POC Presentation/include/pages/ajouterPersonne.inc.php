@@ -24,15 +24,15 @@ if ((empty ( $_POST ['nom'] ))) // formulaire non rempli.
 			<input type='password' placeholder='********' name='mdp' required /> <br /> 
 		<label for='typeCompte'>Type de compte :</label> 
 			<select name='typeCompte' id='typeCompte'>
-				<option>Adh&eacute;rent</option>
-				<option>Contributeur</option>
-				<option>Mod&eacute;rateur</option>
-				<option>Administrateur</option>
+				<option value='adherent'>Adh&eacute;rent</option>
+				<option value='contributeur'>Contributeur</option>
+				<option value='moderateur'>Mod&eacute;rateur</option>
+				<option value='administrateur'>Administrateur</option>
 			</select> 
 		<label for='roles'> Fonction de l'utilisateur :</label> 
 			<select name='roles' id='roles'>
-				<option>Secr&eacute;taire</option>
-				<option>Directeur</option>
+				<option value='secretaire'>Secr&eacute;taire</option>
+				<option value='directeur'>Directeur</option>
 			</select> <br /> 
 		<label for='isAdherent'>Adh&eacute;rent :</label> 
 			<input type='radio' name='isAdherent' value='o' checked='checked' />Oui 
