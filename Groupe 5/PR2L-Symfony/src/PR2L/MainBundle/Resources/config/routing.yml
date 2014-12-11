@@ -1,7 +1,3 @@
-pr2_l_main_homepage:
-    path:    /hello/{name}
-    defaults: { _controller: PR2LMainBundle:Default:index }
-
 hello-world: 
     path:    /hello-world
     defaults: { _controller: PR2LMainBundle:Advert:index }
