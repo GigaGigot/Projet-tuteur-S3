@@ -56,7 +56,7 @@ if (empty ( $_POST ['per_tel'] )) { //formulaire non rempli
 	$PersonneModifie->setUserTypeCompte($user->getUserTypeCompte()); //etant donne que non propose lors de la saisie
 	$PersonneModifie->setUserDerniereConnexion($user->getUserDerniereConnexion()); //car non renseigne dans le formulaire
 	
-	var_dump($PersonneModifie);
+	//var_dump($PersonneModifie);
 	if (! empty ( $_POST ['user_mdp'] )) {
 		// Il a voulu changer de mdp
 		$mdp = $_POST ['user_mdp'];

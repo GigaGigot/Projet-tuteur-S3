@@ -33,7 +33,13 @@ if ((empty ( $_POST ['nom'] ))) // formulaire non rempli.
 			<select name='roles' id='roles'>
 				<option value='secretaire'>Secr&eacute;taire</option>
 				<option value='directeur'>Directeur</option>
-			</select> <br /> 
+			</select> <br />
+		<label for='droit'> Droit de l'utilisateur</label>
+			<select name='droit' id='droit'>
+				<option value='lecture'>Lecture seule</option>
+				<option value='lecture/ecriture'>Lecture et &eacute;criture</option>
+				<option value='admin'>Droits ultime (admin)</option>
+			</select>
 		<label for='isAdherent'>Adh&eacute;rent :</label> 
 			<input type='radio' name='isAdherent' value='o' checked='checked' />Oui 
 			<input type='radio' name='isAdherent' value='n' />Non <br /> 
@@ -53,11 +59,14 @@ if ((empty ( $_POST ['nom'] ))) // formulaire non rempli.
 			'user_mdp' => $_POST ['mdp'],
 			'user_typeCompte' => $_POST ['typeCompte'],
 			'user_roles' => $_POST ['roles'],
-			'user_adherent' => $_POST ['isAdherent'] 
+			'user_adherent' => $_POST ['isAdherent'], 
+			'user_droit' => $_POST['droit']
 	) ); // Details de l'utilisateur stocké dans une variable
 	$Personne->setUserMdp ( sha1 ( sha1 ( $Personne->getUserMdp () ) . SEL ) );
 	// Grain de sel du mot de passe. 
 	// TODO modifier cryptage du mot de passe (sha255?)
+// 	var_dump($Personne);
+// 	var_dump($_POST['droit']);
 
 	//$_SESSION ['Personne'] = $Personne;
 	

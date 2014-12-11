@@ -36,6 +36,7 @@ if ($listeUsers == null) { // Pas de personnes enregistrées
 			// une personne est connectée.
 			if (($_SESSION ["personne_connecte"]->getUserId() == $_POST ['per_num'])) {
 				// Alors, la personne supprimée est la personne connectée.
+				echo "Vous venez de supprimer votre compte.";
 				session_destroy ();
 				// on quitte la session.
 			}

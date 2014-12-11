@@ -8,15 +8,15 @@ $listeUsers = $userManager->getAllUsers ();
 
 <?php
 if (! empty ( $_SESSION ['personne_connecte'] )) {
-	if ($_SESSION['personne_connecte']->getUserTypeCompte()=='Administrateur') {
+	if ($_SESSION['personne_connecte']->getUserDroit()=='admin') {
 		// condition de connexion, seul un administrateur peut modifier des utilisateurs.
 		?>
 <?php
 	//var_dump ( $listeUsers );
-	if ($listeUsers == null) { // Pas de personnes enregistrées
+	if ($listeUsers == 1) { // seul l'admin est enregisté
 		?>
 <p>
-	D&eacute;sol&eacute;, aucun utilisateur n'est enregistr&eacute;. <br />
+	D&eacute;sol&eacute;, aucun autre utilisateur que vous n'est enregistr&eacute;. <br />
 	<a href='index.php?page=2'>Ajouter un utilisateur ?</a>
 <?php
 	} else { // Des personnes sont enregistrées
@@ -59,18 +59,22 @@ if (! empty ( $_SESSION ['personne_connecte'] )) {
 		<input name='per_login' id='per_login' type='text' value='<?php echo $user->getUserLogin(); ?>' required /> 
 	<label for='typeCompte'>Type de compte :</label> 
 		<select name='typeCompte' id='typeCompte'>
-			<option><?php $user->getUserTypeCompte();?></option> 
-			<option>Adh&eacute;rent</option>
-			<option>Contributeur</option>
-			<option>Mod&eacute;rateur</option>
-			<option>Administrateur</option>
+			<option value='adherent'>Adh&eacute;rent</option>
+			<option value='contributeur'>Contributeur</option>
+			<option value='moderateur'>Mod&eacute;rateur</option>
+			<option value='administrateur'>Administrateur</option>
 		</select> 
 	<label for='roles'> Fonction de l'utilisateur :</label> 
 		<select name='roles' id='roles'>
-			<option><?php $user->getUserRoles();?> </option>
-			<option>Secr&eacute;taire</option>
-			<option>Directeur</option>
+			<option value='secretaire'>Secr&eacute;taire</option>
+			<option value='directeur'>Directeur</option>
 		</select> 
+	<label for='droit'> Droit de l'utilisateur</label>
+		<select name='droit' id='droit'>
+			<option value='lecture'>Lecture seule</option>
+			<option value='lecture/ecriture'>Lecture et &eacute;criture</option>
+			<option value='admin'>Droits ultime (admin)</option>
+		</select>
 	<label for='isAdherent'>Adh&eacute;rent :</label> 
 		<input type='radio' name='isAdherent' value='o' checked='checked' />Oui 
 		<input type='radio' name='isAdherent' value='n' />Non 

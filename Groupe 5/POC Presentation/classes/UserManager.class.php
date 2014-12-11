@@ -14,9 +14,9 @@ class UserManager {
 	public function add($user) {
 		// var_dump ( $user );
 		$requete = $this->db->prepare ( 'INSERT INTO user 
-		(user_login, user_mdp, user_nom, user_prenom, user_tel, user_email, user_adherent, user_typeCompte, user_roles, user_derniereConnexion) 
+		(user_login, user_mdp, user_nom, user_prenom, user_tel, user_email, user_adherent, user_typeCompte, user_roles, user_derniereConnexion, user_droit) 
 		VALUES 
-		(:user_login, :user_mdp, :user_nom, :user_prenom, :user_tel, :user_email, :user_adherent, :user_typeCompte, :user_roles, now());' );
+		(:user_login, :user_mdp, :user_nom, :user_prenom, :user_tel, :user_email, :user_adherent, :user_typeCompte, :user_roles, now(), :droit);' );
 		$requete->bindValue ( ':user_login', $user->getUserLogin () );
 		$requete->bindValue ( ':user_mdp', $user->getUserMdp () );
 		$requete->bindValue ( ':user_nom', $user->getUserNom () );
@@ -26,6 +26,7 @@ class UserManager {
 		$requete->bindValue ( ':user_adherent', $user->getUserAdherent () );
 		$requete->bindValue ( ':user_typeCompte', $user->getUserTypeCompte () );
 		$requete->bindValue ( ':user_roles', $user->getUserRoles () );
+		$requete->bindValue (':droit', $user->getUserDroit());
 		
 		// var_dump($requete);
 		$retour = $requete->execute ();
