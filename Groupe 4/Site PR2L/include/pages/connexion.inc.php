@@ -7,10 +7,10 @@ $utilisateurs = $utilisateurManager->getAllUtilisateur();
 //Première itération dans la page, les champs login et password sont vides
 if(empty($_POST["login"]) && empty($_POST["password"]) && !isset($_SESSION["userCourant"]))
 {
-
+    $_SESSION["pageConnexion"] = $_GET["page"];
 ?>
 
-    <form id="form" name="form" action="index.php?page=601" method="post">
+    <form id="form" name="form" action="index.php?page=".<?php echo $_SESSION["pageConnexion"] ?> method="post">
         identifiant : <input type="text" name="login"><br>
         mot de passe : <input type="password" name="password"><br>
         <input type="submit" value="Valider">
