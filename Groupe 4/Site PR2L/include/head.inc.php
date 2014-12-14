@@ -1,6 +1,5 @@
-
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
+    
 	<?php $title="Bienvenue sur le site du Pôle international de Ressources de Limoges et du Limousin" ;?>
 	<title>
 		<?php echo $title ?>
