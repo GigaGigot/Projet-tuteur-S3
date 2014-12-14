@@ -1,3 +1,0 @@
-hello-world: 
-    path:    /hello-world
-    defaults: { _controller: PR2LMainBundle:Advert:index }
