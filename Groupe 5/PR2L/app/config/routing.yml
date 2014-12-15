@@ -1,6 +1,6 @@
 pr2_l_user:
     resource: "@PR2LUserBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /user #TOUTES les routes du UserBundle commenceront par /user
 
 app:
     resource: @AppBundle/Controller/

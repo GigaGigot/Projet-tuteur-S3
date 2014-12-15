@@ -1,0 +1,34 @@
+# src/PR2L/UserBundle/Ressources/config/routing.yml
+# Lors des tests, penser que le préfixe est toujous /user (défini dans le app/config/routing.yml)
+# Pas de tabulation, mais 4 espaces.
+
+pr2l_user_main:
+    path: /
+    defaults: {_controller: PR2LUserBundle:Profil:index }
+    
+pr2l_user_view:
+    path: /view/{id} 
+    defaults: {_controller: PR2LUserBundle:Profil:view , id: null }
+    requirements:
+        id: \d
+        
+pr2l__user_add:
+    path: /add
+    defaults: {_controller: PR2LUserBundle:Profil:add }
+    
+pr2l_user_remove:
+    path: /remove/{id}
+    defaults: {_controller: PR2LUserBundle:Profil:remove }
+    requirements: 
+        id: \d+
+        
+pr2l_user_edit:
+    path: /edit/{id} 
+    defaults: {_controller: PR2LUserBundle:Profil:edit , id: null }
+    requirements:
+        id: \d
+        
+pr2l_user_list: 
+    path: /list
+    defaults: {_controller: PR2LUserBundle:Profil:list }
+        
