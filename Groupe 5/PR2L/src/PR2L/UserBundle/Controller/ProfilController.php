@@ -28,7 +28,7 @@ use Symfony\Component\httpFoundation\RedirectResponse;  // pour les redirections
  * @author Sylvain
  *        
  */
-class Profil extends Controller {
+class ProfilController extends Controller {
 	
 	/**
 	 * Cette fonction permet d'afficher la page d'accueil concernant ce qui est gestion des utilisateurs
@@ -36,6 +36,7 @@ class Profil extends Controller {
 	 * Route : pr2l_user_main
 	 */
 	public function indexAction() {
+		return new Response('Toto</body>');
 	}
 	
 	/**
@@ -102,11 +103,11 @@ class Profil extends Controller {
 		return ($this->render ( 'PR2LUserBundle:Profil:edit.html.twig' ));
 	}
 	
-	/**
-	 * Permet de lister tous les utilisateurs.
-	 *
-	 * Route : pr2l_user_list
-	 */
-	public function listAction() {
-	}
+// 	/**
+// 	 * Permet de lister tous les utilisateurs.
+// 	 *
+// 	 * Route : pr2l_user_list
+// 	 */
+// 	public function listAction() {
+// 	}
 }

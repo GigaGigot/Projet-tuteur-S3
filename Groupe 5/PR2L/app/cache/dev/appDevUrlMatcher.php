@@ -127,13 +127,41 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+        if (0 === strpos($pathinfo, '/user')) {
+            // pr2l_user_main
+            if (rtrim($pathinfo, '/') === '/user') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'pr2l_user_main');
+                }
+
+                return array (  '_controller' => 'PR2L\\UserBundle\\Controller\\ProfilController::indexAction',  '_route' => 'pr2l_user_main',);
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            // pr2l_user_view
+            if (0 === strpos($pathinfo, '/user/view') && preg_match('#^/user/view(?:/(?P<id>\\d))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pr2l_user_view')), array (  '_controller' => 'PR2L\\UserBundle\\Controller\\ProfilController::viewAction',  'id' => NULL,));
+            }
+
+            // pr2l__user_add
+            if ($pathinfo === '/user/add') {
+                return array (  '_controller' => 'PR2L\\UserBundle\\Controller\\ProfilController::addAction',  '_route' => 'pr2l__user_add',);
+            }
+
+            // pr2l_user_remove
+            if (0 === strpos($pathinfo, '/user/remove') && preg_match('#^/user/remove/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pr2l_user_remove')), array (  '_controller' => 'PR2L\\UserBundle\\Controller\\ProfilController::removeAction',));
+            }
+
+            // pr2l_user_edit
+            if (0 === strpos($pathinfo, '/user/edit') && preg_match('#^/user/edit(?:/(?P<id>\\d))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pr2l_user_edit')), array (  '_controller' => 'PR2L\\UserBundle\\Controller\\ProfilController::editAction',  'id' => NULL,));
+            }
+
+            // pr2l_user_list
+            if ($pathinfo === '/user/list') {
+                return array (  '_controller' => 'PR2L\\UserBundle\\Controller\\ProfilController::listAction',  '_route' => 'pr2l_user_list',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
