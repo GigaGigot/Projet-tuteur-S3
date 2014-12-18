@@ -3,8 +3,9 @@
 	$mManager = new MenuManager($db);
 	$menusParent = $mManager->getAllMenusParents();
 ?>
+	<div><a href="index.php?page=22">Connexion</a></div><br/>
 <hr/>
-<div><nav>
+<nav>
 	<ul id="menu-deroulant">
         <?php
             foreach($menusParent as $menuP){
@@ -24,6 +25,6 @@
                 <?php
             }
         ?>
-	</ul>
-</nav></div>
+	</ul>	
 <hr/>
+</nav>

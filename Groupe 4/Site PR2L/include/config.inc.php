@@ -3,7 +3,7 @@
 // A modifier en fonction de la configuration
 
 define('DBHOST', "localhost");
-define('DBNAME', "connexion");
+define('DBNAME', "pr2l");
 define('DBUSER', "bd");
 define('DBPASSWD', "bede");
 define('ENV','dev');
