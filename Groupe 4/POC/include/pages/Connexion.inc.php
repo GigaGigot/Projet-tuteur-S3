@@ -27,7 +27,7 @@ if (is_null($_SESSION["userCourant"]) || empty($_SESSION["userCourant"]))
         
         //Deuxième itération dans la base de données
         $login = $_POST["login"];
-        $password = $_POST["password"];
+        $password = crypt($_POST["password"],'securite');
         
         $user = false;
         

@@ -4,7 +4,6 @@
 	
 		<ul>
 			<li><a href="index.php?page=1">Connexion</a></li>
-			<li><a href="index.php?page=2">Creation</a></li>
             <li><a href="index.php?page=3">Test</a></li>
             <li><a href="index.php?page=4">Gestion des utilisateurs</a></li>
             <li><a href="index.php?page=5">Modification d'informations</a></li>

@@ -26,10 +26,14 @@ if (!(is_null($_SESSION["userCourant"])))
 ?>
                 </table><br/>
 
-                 <form id="form" method="post">
-                        Saisir l'identifiant de la personne à modifier : <input type=text name="personne"></textarea>
-                        <input type=submit value="Valider" onclick="self.location.href='./GestionAdmin.inc.php'">
+                <a href="index.php?page=2">Creation</a></br>
+    
+                <form id="form" method="post">
+                        Saisir l'identifiant de la personne : <input type=text name="personne"></textarea>
+                        <input type=submit value="Valider" onclick="self.location.href='index.php?page=4'">
+                        
                 </form>
+
                 
 <?php
         }else if(empty($_POST["droits"])){
@@ -47,7 +51,8 @@ if (!(is_null($_SESSION["userCourant"])))
             
             if($_SESSION['user'] != false)
             {
-?>
+?>              <h2>Modification de la personne</h2>              
+
                 <form name="changeDroits" method="post">
                     <table  style="border : 1px solid black">
                             <tr><th>Nom</th><th>Prénom</th><th>login</th><th>droits</th></tr>
@@ -65,7 +70,7 @@ if (!(is_null($_SESSION["userCourant"])))
                                 </td>
                             </tr>
                     </table>
-                    <input type=submit value="Valider" onclick="self.location.href='./GestionAdmin.inc.php'">
+                    <input type=submit value="Valider" onclick="self.location.href='index.php?page=4'">
                 </form>
 <?php
             }
@@ -74,12 +79,14 @@ if (!(is_null($_SESSION["userCourant"])))
                 echo "Cet utilisateur n'existe pas";
             }
         }else{
-            $_SESSION['user']->setDroits($_POST["droits"]);
-            $pdo = new Mypdo();
-            $utilisateurManager = new UtilisateurManager($pdo);
-            $retour = $utilisateurManager->update($_SESSION['user']);
+            if(!empty($_POST["droits"])){
+                $_SESSION['user']->setDroits($_POST["droits"]);
+                $pdo = new Mypdo();
+                $utilisateurManager = new UtilisateurManager($pdo);
+                $retour = $utilisateurManager->update($_SESSION['user']);
             
-            echo "Les droits de cette personne ont été mis à jour";
+                echo "Les droits de cette personne ont été mis à jour";
+            }
         }
     }
     else

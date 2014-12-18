@@ -35,6 +35,9 @@ case 6:
     include_once('pages/Deconnexion.inc.php');
     break;
 
+case 7:
+    include_once('pages/Suppression.inc.php');
+
 default : 	include_once('pages/accueil.inc.php');
 }
 	

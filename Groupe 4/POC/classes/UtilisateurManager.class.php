@@ -19,7 +19,7 @@ class UtilisateurManager{
     */
     
 	public function add($utilisateur){
-		$requete = $this->db->prepare('insert into utilisateur (login,password,nom,prenom,droits) values (:login,:password,:nom,:prenom,:droits);');
+		$requete = $this->db->prepare('insert into Utilisateur (login,password,nom,prenom,droits) values (:login,:password,:nom,:prenom,:droits);');
 		$requete->bindValue(':login', $utilisateur->getLogin());
 		$requete->bindValue(':password', $utilisateur->getPassword());
         $requete->bindValue(':nom', $utilisateur->getNom());
@@ -31,7 +31,7 @@ class UtilisateurManager{
 	}
     
     public function update($utilisateur){
-        $requete = $this->db->prepare('update utilisateur set login=:login, password=:password, nom=:nom, prenom=:prenom, droits=:droits where idUtilisateur = :id');
+        $requete = $this->db->prepare('update Utilisateur set login=:login, password=:password, nom=:nom, prenom=:prenom, droits=:droits where idUtilisateur = :id');
         $requete->bindValue(':id', $utilisateur->getId());
         $requete->bindValue(':login', $utilisateur->getLogin());
 		$requete->bindValue(':password', $utilisateur->getPassword());
@@ -49,7 +49,7 @@ class UtilisateurManager{
 	
 	public function getAllUtilisateur(){
 		$listeUtilisateur = array();
-		$sql = 'select * from utilisateur';
+		$sql = 'select * from Utilisateur';
 		$requete = $this->db->prepare($sql);
 		$requete->execute();
 		

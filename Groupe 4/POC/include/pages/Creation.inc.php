@@ -1,6 +1,7 @@
 <?php
 if (!(is_null($_SESSION["userCourant"])))
 {
+    ?><h2>Création d'un utilisateur</h2><?php
     if ($_SESSION["userCourant"]->getDroits() == "admin")
     {
         // le login, le mot de passe, le nom, le prenom ne sont pas saisies
@@ -26,12 +27,15 @@ if (!(is_null($_SESSION["userCourant"])))
         else
         {
             // deuxième itération, tous les champs sont saisis
-
+            
+            //cryptage du mot de passe
+            $mdp = crypt($_POST['password1'], "securite");
+            
             // Connexion à la base
             $pdo = new Mypdo();
             $utilisateur = new Utilisateur(array(
                'login'=>$_POST["login"],
-               'password'=>$_POST["password1"],
+               'password'=>$mdp,
                'nom'=>$_POST["nom"],
                'prenom'=>$_POST["prenom"],
                'droits'=>$_POST["droits"]    
@@ -56,4 +60,6 @@ else
 {
     echo "Vous n'avez pas accès à cette page";
 }
+
+
 ?>
