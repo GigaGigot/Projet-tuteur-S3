@@ -1,0 +1,6 @@
+# app/config/routing.yml
+
+pr2_l_site:
+    resource: "@PR2LSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+

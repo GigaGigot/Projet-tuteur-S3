@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="CMS">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="icon" type="image/png" href="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/image/iconePR2L.png" />
+
+	<link rel="stylesheet" type="text/css" href="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/css/styleSite.css" />
+	<link rel="stylesheet" type="text/css" href="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/css/styleCMS.css" />
+	
+	<script type="text/javascript" src="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/js/angular.min.js"></script>
+	<script type="text/javascript" src="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/js/app.js"></script>
+
+    {{ include("PR2LSiteBundle:Style:style.css.twig") }}
+    
+    <title>{% block title %}PR2L{% endblock %}</title>
+  </head>
+  
+  <header>
+  	<div class="eltEntete"><a href="">	<img src="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/image/logo.png" alt="Logo PR2L" title="Logo association PR2L" />	</a></div>
+	<div class="eltEntete">
+		<strong></bold><em>P</em>ôle international de <br />
+		<em>R</em>essources de <br />
+		<em>L</em>imoges et du<br />
+		<em>L</em>imousin<br />
+		<br />
+		Association pour le recensement <br />
+		et la valorisation des fonds d'archives<br />
+		du monde ouvrier</strong>
+	</div>
+  </header>
+  
+  <aside>
+  </aside>
+  
+  <nav>
+  	{% block menu %}
+  	{% endblock %}
+  </nav>
+  <body>
+
+    {% block body %}
+    {% endblock %}
+
+  </body>
+  
+  <footer>
+	Pôle international des<br>
+	Ressources de <br>
+	Limoges et du <br>
+	Limousin
+  </footer>
+</html>

@@ -1,0 +1,26 @@
+<article id="colloque">
+	<h1>Les grandes figures corréziennes de l'économie sociale de Firmin Marbeau à René Teulade </h1>
+	<p>Michel Dreyfus animera un colloque sur le théme suivant :</p>
+	<p>" Deux siècles d'économie sociale et solidaire avec les Corréziens"</p>
+	<p>Les grandes figures corréziennes de l'économie sociale de Firmin Marbeau à René Teulade</p>
+	<p>Rendez vous dans l'amphithéâtre de l'Hôtel du Département de la Corrèze à Tulle, le jeudi 20 novembre 2014 à 14 heures.</p>
+	<p>Intervenants : Anne-Valérie Etendard, Gilbert Beaubatie, Michel Dreyfus, Bernard Lacorre</p>
+	<p>
+		Merci de confirmer votre participation par mail aux adresses suivantes : vmarin@cg19.fr ou contact@pr2l.fr</p>
+	<p>Un colloque organisé par le le PR2L en partenariat avec le Conseil Général de la Corréze, La DRAC Limousin dans le cadsre du mois de l'économie sociale et solidaire.</p>
+</article>
+
+<article id="SoireeEtude">
+	<h1>Soirée d’étude : Utopies sociales au XIXème siècle en Haute-Vienne : les saint-simoniens </h1>
+	<p>Le PR2L organise une soirée d’étude :</p>
+
+	<p>Utopies sociales au XIXème siècle en Haute-Vienne : les saint-simoniens</p>
+
+	<p>Cette soirée sera donnée par Michel DREYFUS, Philippe GRANDCOING, Maguelone NOUVEL-KIRSCHLEGER et animée par Dominique DANTHIEUX</p>
+
+	<p>Rendez-vous pour le mercredi 5 novembre 2014 à partir de 18h Salle des Assemblées du Conseil Général de la Haute-Vienne 11 rue François Chénieux, 87000 LIMOGES</p>
+
+
+
+	<p>Cette manifestation est organisée dans le cadre du Mois de l’économie sociale et solidaire (CRESS Limousin) avec le soutien du Conseil Général de la Haute Vienne, avec le concours de l’État (ministère de la Culture et de la Communication – DRAC du Limousin) et en partenariat avec la Fondation du Crédit Coopératif.</p>
+</article>

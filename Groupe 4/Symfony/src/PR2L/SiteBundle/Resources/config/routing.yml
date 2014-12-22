@@ -1,0 +1,3 @@
+pr2_l_site_homepage:
+    path:     /pr2l/accueil
+    defaults: { _controller: PR2LSiteBundle:Default:index }

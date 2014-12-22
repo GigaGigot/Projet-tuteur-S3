@@ -1,0 +1,4 @@
+services:
+#    pr2_l_site.example:
+#        class: PR2L\SiteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

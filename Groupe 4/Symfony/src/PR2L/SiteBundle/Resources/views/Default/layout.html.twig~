@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	{{ include("PR2LSiteBundle:Advert:index.html.twig") }}
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}PR2L{% endblock %}</title>
+  </head>
+  <nav>
+  	{% block menu %}
+  	{% endblock %}
+  </nav>
+  <body>
+
+    {% block body %}
+    {% endblock %}
+
+  </body>
+</html>

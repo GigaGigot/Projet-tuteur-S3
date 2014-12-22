@@ -1,0 +1,141 @@
+		/*__Page__*/
+/*.cadre{
+	background-color: #C76565;
+	width: 800px;
+	margin: 5% auto auto auto;
+	border: 5px;
+}*/
+
+		/*__CMS__*/
+.cmsEntier{
+	border: 5px solid #FAEDED;
+	border-radius: 15px;
+	background-color: #FAEDED;
+}
+
+   /*__Edition d'articles__*/
+.boutonGris {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.boutonGris:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.boutonGris:active {
+	position:relative;
+	top:1px;
+}
+
+.nonEdition{
+	border: 5px solid lightgrey;
+	border-radius: 15px;
+	margin: 5px;
+	text-align:center;
+	padding: 15px 0;
+	background-color: #EBE8E8;
+}
+
+.edition{
+	border: 5px solid lightgrey;
+	border-radius: 15px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #EBE8E8;
+}
+
+.ulliste{
+    list-style-type: none; 
+    margin: 0; 
+    margin-bottom: -6px; 
+}
+
+.liliste{
+	border: 1px solid grey;
+	border-radius: 5px 5px 0px 0px;
+	background-color: #CFCCCC;
+	padding: 2px;
+    display: inline-block;   
+}
+.liliste a:link, .liliste a:visited, .liliste a:hover, .liliste a:focus, .liliste a:active{
+	text-decoration: none;
+}
+
+.contenu{
+	border: 1px solid grey;
+	border-radius: 15px;
+	margin: 5px;
+	padding: 5px;
+	background-color: darkgrey;
+	height: 400px;
+}
+
+.boutonContenu{
+	border: 5px solid lightgrey;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #EBE8E8;
+}
+
+.zoneContenu{
+	border: 5px solid lightgrey;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #EBE8E8;
+	height: 275px;
+	overflow: auto;
+}
+
+.boutonContenu button{
+	margin-left: 36px;
+}
+
+.validerAnnulerContenu{
+	border: 5px solid lightgrey;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #EBE8E8;
+}
+
+.validerAnnulerContenu button{
+	position:relative;
+    top:40%; 
+    left:40%;
+}
+
+
+
+.previsualisation{
+	border: 1px solid grey;
+	border-radius: 15px;
+	margin: 5px;
+	padding: 5px;
+	background-color: darkgrey;
+	height: 400px;
+}
+
+    /*__Liste d'articles__*/
+.article{
+	border: 5px solid lightgrey;
+	border-radius: 15px;
+	margin: 5px;
+	padding: 5px;
+	background-color: #EBE8E8;
+}
+
+

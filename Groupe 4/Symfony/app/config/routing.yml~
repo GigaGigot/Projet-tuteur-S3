@@ -1,0 +1,4 @@
+max_platform:
+    resource: "@MaxPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
