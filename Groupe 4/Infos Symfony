@@ -7,3 +7,5 @@ Fichiers js, css, images : Symfony/web/bundles/pr2lsite
 Chemins pages créés : Symfony/src/PR2L/SiteBundle/Resources/config/routing.yml  et  Symfony/src/PR2L/SiteBundle/Controller/DefaultController.php
 
 Problème "Archives" dû aux similitudes Symfony 2/AngularJS -> À	voir avec Théo
+
+Connexion à passer correctement sous Symfony 2 -> À voir avec Bastien et Arnaud
