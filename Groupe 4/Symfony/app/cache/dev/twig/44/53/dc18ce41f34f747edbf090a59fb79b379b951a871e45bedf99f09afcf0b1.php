@@ -138,23 +138,47 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</li>
-\t\t<li><a href=\"index.php?page=4\">RESSOURCES</a> 
+\t\t<li><a href=\"";
+        // line 67
+        echo "ressources";
+        echo "\">RESSOURCES</a> 
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"index.php?page=401\">Catalogue d'archives</a>
+\t\t\t\t<li><a href=\"";
+        // line 69
+        echo "archives";
+        echo "\">Catalogue d'archives</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=402\">Bibliothèque</a>
+\t\t\t\t<li><a href=\"";
+        // line 71
+        echo "bibliotheque";
+        echo "\">Bibliothèque</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=403\">Travaux de recherche</a>
+\t\t\t\t<li><a href=\"";
+        // line 73
+        echo "travauxRecherche";
+        echo "\">Travaux de recherche</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=404\">Nos publications</a>
+\t\t\t\t<li><a href=\"";
+        // line 75
+        echo "publications";
+        echo "\">Nos publications</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=405\">Liens utiles</a>
+\t\t\t\t<li><a href=\"";
+        // line 77
+        echo "liensUtiles";
+        echo "\">Liens utiles</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</li>
-\t\t<li><a href=\"index.php?page=5\">CHANTIERS</a> 
+\t\t<li><a href=\"";
+        // line 81
+        echo "chantiers";
+        echo "\">CHANTIERS</a> 
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"index.php?page=501\">Recencement pour la mutualité</a>
+\t\t\t\t<li><a href=\"";
+        // line 83
+        echo "recensementMutualite";
+        echo "\">Recencement pour la mutualité</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"index.php?page=502\">Inventaire de la coopération en Limousin</a>
 \t\t\t\t</li>
@@ -217,6 +241,6 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 
     public function getDebugInfo()
     {
-        return array (  205 => 105,  202 => 104,  196 => 12,  182 => 106,  180 => 104,  136 => 63,  131 => 61,  124 => 57,  119 => 55,  114 => 53,  109 => 51,  101 => 46,  96 => 44,  91 => 42,  86 => 40,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
+        return array (  229 => 105,  226 => 104,  220 => 12,  206 => 106,  204 => 104,  180 => 83,  175 => 81,  168 => 77,  163 => 75,  158 => 73,  153 => 71,  148 => 69,  143 => 67,  136 => 63,  131 => 61,  124 => 57,  119 => 55,  114 => 53,  109 => 51,  101 => 46,  96 => 44,  91 => 42,  86 => 40,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
     }
 }

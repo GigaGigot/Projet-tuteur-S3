@@ -186,6 +186,46 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::gererPartenairesAction',  '_route' => 'pr2_l_site_gererPartenaires',);
             }
 
+            // pr2_l_site_ressources
+            if ($pathinfo === '/pr2l/ressources') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::ressourcesAction',  '_route' => 'pr2_l_site_ressources',);
+            }
+
+            // pr2_l_site_archives
+            if ($pathinfo === '/pr2l/archives') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::archivesAction',  '_route' => 'pr2_l_site_archives',);
+            }
+
+            // pr2_l_site_bibliotheque
+            if ($pathinfo === '/pr2l/bibliotheque') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::bibliothequeAction',  '_route' => 'pr2_l_site_bibliotheque',);
+            }
+
+            // pr2_l_site_travauxRecherche
+            if ($pathinfo === '/pr2l/travauxRecherche') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::travauxRechercheAction',  '_route' => 'pr2_l_site_travauxRecherche',);
+            }
+
+            // pr2_l_site_publications
+            if ($pathinfo === '/pr2l/publications') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::publicationsAction',  '_route' => 'pr2_l_site_publications',);
+            }
+
+            // pr2_l_site_liensUtiles
+            if ($pathinfo === '/pr2l/liensUtiles') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::liensUtilesAction',  '_route' => 'pr2_l_site_liensUtiles',);
+            }
+
+            // pr2_l_site_chantiers
+            if ($pathinfo === '/pr2l/chantiers') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::chantiersAction',  '_route' => 'pr2_l_site_chantiers',);
+            }
+
+            // pr2_l_site_recensementMutualite
+            if ($pathinfo === '/pr2l/recensementMutualite') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::recensementMutualiteAction',  '_route' => 'pr2_l_site_recensementMutualite',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

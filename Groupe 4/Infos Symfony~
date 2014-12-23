@@ -4,4 +4,6 @@ Pour accéder aux pages par le navigateur : http://localhost/Projet-tuteur-S3/Gr
 
 Fichiers js, css, images : Symfony/web/bundles/pr2lsite
 
-Chemins pages créés : Symfony/src/PR2L/SiteBundle/Resources/config/routing.yml  et  
+Chemins pages créés : Symfony/src/PR2L/SiteBundle/Resources/config/routing.yml  et  Symfony/src/PR2L/SiteBundle/Controller/DefaultController.php
+
+Problème "Archives" dû aux similitudes Symfony 2/AngularJS

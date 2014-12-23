@@ -70,6 +70,30 @@ pr2_l_site_liensUtiles:
     path:     /pr2l/liensUtiles
     defaults: { _controller: PR2LSiteBundle:Default:liensUtiles }     
     
+pr2_l_site_chantiers:
+    path:     /pr2l/chantiers
+    defaults: { _controller: PR2LSiteBundle:Default:chantiers }  
+    
+pr2_l_site_recensementMutualite:
+    path:     /pr2l/recensementMutualite
+    defaults: { _controller: PR2LSiteBundle:Default:recensementMutualite }  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

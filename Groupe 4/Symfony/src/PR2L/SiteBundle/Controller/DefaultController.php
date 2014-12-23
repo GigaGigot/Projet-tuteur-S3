@@ -95,6 +95,16 @@ class DefaultController extends Controller
     {
         return $this->render('PR2LSiteBundle:Default:liensUtiles.html.twig');
     }
+    
+    public function chantiersAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:chantiers.html.twig');
+    }
+    
+    public function recensementMutualiteAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:recensementMutualite.html.twig');
+    }
 }
 
 
