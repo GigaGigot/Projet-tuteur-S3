@@ -124,7 +124,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // pr2_l_site_homepage
         if ($pathinfo === '/pr2l/accueil') {
-            return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pr2_l_site_homepage',);
+            return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::accueilAction',  '_route' => 'pr2_l_site_homepage',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

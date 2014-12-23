@@ -11,7 +11,6 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'menu' => array($this, 'block_menu'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -23,21 +22,18 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\" ng-app=\"CMS\">
   <head>
     <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
-    <link rel=\"icon\" type=\"image/png\" href=\"/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/image/iconePR2L.png\" />
 
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/css/styleSite.css\" />
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/css/styleCMS.css\" />
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/css/styleSite.css"), "html", null, true);
+        echo "\" />
+\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styleCMS.css\" />
 \t
-\t<script type=\"text/javascript\" src=\"/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/js/angular.min.js\"></script>
-\t<script type=\"text/javascript\" src=\"/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/js/app.js\"></script>
-
-    ";
-        // line 13
-        echo twig_include($this->env, $context, "PR2LSiteBundle:Style:style.css.twig");
-        echo "
+\t<script type=\"text/javascript\" src=\"js/angular.min.js\"></script>
+\t<script type=\"text/javascript\" src=\"js/app.js\"></script>
     
     <title>";
-        // line 15
+        // line 12
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
   </head>
@@ -59,18 +55,82 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
   <aside>
   </aside>
   
-  <nav>
-  \t";
-        // line 36
-        $this->displayBlock('menu', $context, $blocks);
-        // line 38
-        echo "  </nav>
+  <nav>\t
+<hr/>
+<div><nav>
+\t<ul id=\"menu-deroulant\">
+\t\t<li><a href=\"index.php?page=1\">PR2L</a> 
+\t\t\t<ul>
+\t\t\t\t<li><a href=\"index.php?page=101\">Le projet</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=102\">Fondateurs</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=103\">Revue de presse</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=104\">Adhérer à l'association</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=105\">Vie de l'association</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</li>
+\t\t<li>
+\t\t\t<a href=\"index.php?page=2\">ACTUALITES</a> 
+\t\t\t<ul>
+\t\t\t\t<li><a href=\"index.php?page=201\">Action / Evènements</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=202\">Quoi de neuf?</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=203\">Autour de nous?</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</li>
+\t\t<li><a href=\"index.php?page=3\">PARTENAIRES</a> 
+\t\t\t<ul>
+\t\t\t\t<li><a href=\"index.php?page=301\">Gérer les partenaires</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</li>
+\t\t<li><a href=\"index.php?page=4\">RESSOURCES</a> 
+\t\t\t<ul>
+\t\t\t\t<li><a href=\"index.php?page=401\">Catalogue d'archives</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=402\">Bibliothèque</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=403\">Travaux de recherche</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=404\">Nos publications</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=405\">Liens utiles</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</li>
+\t\t<li><a href=\"index.php?page=5\">CHANTIERS</a> 
+\t\t\t<ul>
+\t\t\t\t<li><a href=\"index.php?page=501\">Recencement pour la mutualité</a>
+\t\t\t\t</li>
+\t\t\t\t<li><a href=\"index.php?page=502\">Inventaire de la coopération en Limousin</a>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t</li>
+\t\t<li><a href=\"index.php?page=6\">INTRANET</a>
+\t\t\t<ul>
+\t\t\t<li><a href=\"index.php?page=601\">Connexion</a></li>
+\t\t\t<li><a href=\"index.php?page=602\">Creation</a></li>
+            <li><a href=\"index.php?page=603\">Gestion des utilisateurs</a></li>
+            <li><a href=\"index.php?page=604\">Modification d'informations</a></li>
+            <li><a href=\"index.php?page=605\">Déconnexion</a></li>
+\t\t</ul>
+\t\t</li>
+\t</ul>
+</nav></div>
+<hr/>
+  </nav>
   <body>
 
     ";
-        // line 41
+        // line 104
         $this->displayBlock('body', $context, $blocks);
-        // line 43
+        // line 106
         echo "
   </body>
   
@@ -84,23 +144,16 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 ";
     }
 
-    // line 15
+    // line 12
     public function block_title($context, array $blocks = array())
     {
         echo "PR2L";
     }
 
-    // line 36
-    public function block_menu($context, array $blocks = array())
-    {
-        // line 37
-        echo "  \t";
-    }
-
-    // line 41
+    // line 104
     public function block_body($context, array $blocks = array())
     {
-        // line 42
+        // line 105
         echo "    ";
     }
 
@@ -116,6 +169,6 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 
     public function getDebugInfo()
     {
-        return array (  104 => 42,  101 => 41,  97 => 37,  94 => 36,  88 => 15,  74 => 43,  72 => 41,  67 => 38,  65 => 36,  41 => 15,  36 => 13,  22 => 1,);
+        return array (  157 => 105,  154 => 104,  148 => 12,  134 => 106,  132 => 104,  37 => 12,  28 => 6,  21 => 1,);
     }
 }
