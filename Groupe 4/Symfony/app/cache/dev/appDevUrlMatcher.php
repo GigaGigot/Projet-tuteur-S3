@@ -124,9 +124,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/pr2l')) {
             if (0 === strpos($pathinfo, '/pr2l/ac')) {
-                // pr2_l_site_homepage
+                // pr2_l_site_accueil
                 if ($pathinfo === '/pr2l/accueil') {
-                    return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::accueilAction',  '_route' => 'pr2_l_site_homepage',);
+                    return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::accueilAction',  '_route' => 'pr2_l_site_accueil',);
                 }
 
                 // pr2_l_site_actionsEvenements
@@ -139,6 +139,41 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // pr2_l_site_projet
             if ($pathinfo === '/pr2l/projet') {
                 return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::projetAction',  '_route' => 'pr2_l_site_projet',);
+            }
+
+            // pr2_l_site_fondateurs
+            if ($pathinfo === '/pr2l/fondateurs') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::fondateursAction',  '_route' => 'pr2_l_site_fondateurs',);
+            }
+
+            // pr2_l_site_revuePresse
+            if ($pathinfo === '/pr2l/revuePresse') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::revuePresseAction',  '_route' => 'pr2_l_site_revuePresse',);
+            }
+
+            // pr2_l_site_adherer
+            if ($pathinfo === '/pr2l/adherer') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::adhererAction',  '_route' => 'pr2_l_site_adherer',);
+            }
+
+            // pr2_l_site_vieAssociation
+            if ($pathinfo === '/pr2l/vieAssociation') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::vieAssociationAction',  '_route' => 'pr2_l_site_vieAssociation',);
+            }
+
+            // pr2_l_site_actualites
+            if ($pathinfo === '/pr2l/actualites') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::actualitesAction',  '_route' => 'pr2_l_site_actualites',);
+            }
+
+            // pr2_l_site_quoiDeNeuf
+            if ($pathinfo === '/pr2l/quoiDeNeuf') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::quoiDeNeufAction',  '_route' => 'pr2_l_site_quoiDeNeuf',);
+            }
+
+            // pr2_l_site_autourDeNous
+            if ($pathinfo === '/pr2l/autourDeNous') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::autourDeNousAction',  '_route' => 'pr2_l_site_autourDeNous',);
             }
 
         }

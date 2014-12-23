@@ -81,27 +81,48 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
         echo "projet";
         echo "\">Le projet</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=102\">Fondateurs</a>
+\t\t\t\t<li><a href=\"";
+        // line 40
+        echo "fondateurs";
+        echo "\">Fondateurs</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=103\">Revue de presse</a>
+\t\t\t\t<li><a href=\"";
+        // line 42
+        echo "revuePresse";
+        echo "\">Revue de presse</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=104\">Adhérer à l'association</a>
+\t\t\t\t<li><a href=\"";
+        // line 44
+        echo "adherer";
+        echo "\">Adhérer à l'association</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=105\">Vie de l'association</a>
+\t\t\t\t<li><a href=\"";
+        // line 46
+        echo "vieAssociation";
+        echo "\">Vie de l'association</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</li>
 \t\t<li>
-\t\t\t<a href=\"index.php?page=2\">ACTUALITES</a> 
+\t\t\t<a href=\"";
+        // line 51
+        echo "actualites";
+        echo "\">ACTUALITES</a> 
 \t\t\t<ul>
 \t\t\t\t<li><a href=\"";
         // line 53
         echo "actionsEvenements";
         echo "\">Action / Evènements</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=202\">Quoi de neuf?</a>
+\t\t\t\t<li><a href=\"";
+        // line 55
+        echo "quoiDeNeuf";
+        echo "\">Quoi de neuf ?</a>
 \t\t\t\t</li>
-\t\t\t\t<li><a href=\"index.php?page=203\">Autour de nous?</a>
+\t\t\t\t<li><a href=\"";
+        // line 57
+        echo "autourDeNous";
+        echo "\">Autour de nous</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</li>
@@ -190,6 +211,6 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 
     public function getDebugInfo()
     {
-        return array (  178 => 105,  175 => 104,  169 => 12,  155 => 106,  153 => 104,  99 => 53,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
+        return array (  199 => 105,  196 => 104,  190 => 12,  176 => 106,  174 => 104,  124 => 57,  119 => 55,  114 => 53,  109 => 51,  101 => 46,  96 => 44,  91 => 42,  86 => 40,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
     }
 }

@@ -1,4 +1,4 @@
-pr2_l_site_homepage:
+pr2_l_site_accueil:
     path:     /pr2l/accueil
     defaults: { _controller: PR2LSiteBundle:Default:accueil }
 
@@ -10,6 +10,30 @@ pr2_l_site_projet:
     path:     /pr2l/projet
     defaults: { _controller: PR2LSiteBundle:Default:projet }
     
-pr2_l_site_projet:
+pr2_l_site_fondateurs:
     path:     /pr2l/fondateurs
     defaults: { _controller: PR2LSiteBundle:Default:fondateurs }
+    
+pr2_l_site_revuePresse:
+    path:     /pr2l/revuePresse
+    defaults: { _controller: PR2LSiteBundle:Default:revuePresse }
+    
+pr2_l_site_adherer:
+    path:     /pr2l/adherer
+    defaults: { _controller: PR2LSiteBundle:Default:adherer }
+    
+pr2_l_site_vieAssociation:
+    path:     /pr2l/vieAssociation
+    defaults: { _controller: PR2LSiteBundle:Default:vieAssociation }
+    
+pr2_l_site_actualites:
+    path:     /pr2l/actualites
+    defaults: { _controller: PR2LSiteBundle:Default:actualites }
+    
+pr2_l_site_quoiDeNeuf:
+    path:     /pr2l/quoiDeNeuf
+    defaults: { _controller: PR2LSiteBundle:Default:quoiDeNeuf }
+    
+pr2_l_site_autourDeNous:
+    path:     /pr2l/autourDeNous
+    defaults: { _controller: PR2LSiteBundle:Default:autourDeNous }

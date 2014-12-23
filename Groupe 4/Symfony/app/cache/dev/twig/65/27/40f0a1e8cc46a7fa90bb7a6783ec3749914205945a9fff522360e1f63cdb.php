@@ -25,24 +25,24 @@ class __TwigTemplate_652740f0a1e8cc46a7fa90bb7a6783ec3749914205945a9fff522360e1f
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 5
+    // line 3
     public function block_title($context, array $blocks = array())
     {
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Accueil";
     }
 
-    // line 7
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        // line 8
+        // line 6
         echo "  <article id=\"accueil\">
 
 
 \t<h1>Le mot du président</h1>
 
 \t<img src=\"";
-        // line 13
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/images/photoMotPres.jpg"), "html", null, true);
         echo "\" id=\"motPresident\">
 \t<p>Madame, Monsieur,</p>
@@ -88,6 +88,6 @@ class __TwigTemplate_652740f0a1e8cc46a7fa90bb7a6783ec3749914205945a9fff522360e1f
 
     public function getDebugInfo()
     {
-        return array (  46 => 13,  39 => 8,  36 => 7,  29 => 5,);
+        return array (  46 => 11,  39 => 6,  36 => 5,  29 => 3,);
     }
 }
