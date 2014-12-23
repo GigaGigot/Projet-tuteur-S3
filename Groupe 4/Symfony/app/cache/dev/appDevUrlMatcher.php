@@ -176,6 +176,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::autourDeNousAction',  '_route' => 'pr2_l_site_autourDeNous',);
             }
 
+            // pr2_l_site_partenaires
+            if ($pathinfo === '/pr2l/partenaires') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::partenairesAction',  '_route' => 'pr2_l_site_partenaires',);
+            }
+
+            // pr2_l_site_gererPartenaires
+            if ($pathinfo === '/pr2l/gererPartenaires') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::gererPartenairesAction',  '_route' => 'pr2_l_site_gererPartenaires',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

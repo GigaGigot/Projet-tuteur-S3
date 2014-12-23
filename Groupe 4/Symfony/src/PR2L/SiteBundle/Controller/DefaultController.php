@@ -55,4 +55,14 @@ class DefaultController extends Controller
     {
         return $this->render('PR2LSiteBundle:Default:autourDeNous.html.twig');
     }
+    
+    public function partenairesAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:partenaires.html.twig');
+    }
+    
+    public function gererPartenairesAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:gererPartenaires.html.twig');
+    }
 }

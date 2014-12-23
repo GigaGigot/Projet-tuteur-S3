@@ -37,3 +37,11 @@ pr2_l_site_quoiDeNeuf:
 pr2_l_site_autourDeNous:
     path:     /pr2l/autourDeNous
     defaults: { _controller: PR2LSiteBundle:Default:autourDeNous }
+    
+pr2_l_site_partenaires:
+    path:     /pr2l/partenaires
+    defaults: { _controller: PR2LSiteBundle:Default:partenaires }
+    
+pr2_l_site_gererPartenaires:
+    path:     /pr2l/gererPartenaires
+    defaults: { _controller: PR2LSiteBundle:Default:gererPartenaires }

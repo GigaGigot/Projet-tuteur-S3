@@ -38,6 +38,8 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'pr2_l_site_actualites' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::actualitesAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pr2l/actualites',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'pr2_l_site_quoiDeNeuf' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::quoiDeNeufAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pr2l/quoiDeNeuf',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'pr2_l_site_autourDeNous' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::autourDeNousAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pr2l/autourDeNous',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'pr2_l_site_partenaires' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::partenairesAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pr2l/partenaires',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'pr2_l_site_gererPartenaires' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::gererPartenairesAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/pr2l/gererPartenaires',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
 
     /**

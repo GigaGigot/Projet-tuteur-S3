@@ -126,9 +126,15 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</li>
-\t\t<li><a href=\"index.php?page=3\">PARTENAIRES</a> 
+\t\t<li><a href=\"";
+        // line 61
+        echo "partenaires";
+        echo "\">PARTENAIRES</a> 
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"index.php?page=301\">Gérer les partenaires</a>
+\t\t\t\t<li><a href=\"";
+        // line 63
+        echo "gererPartenaires";
+        echo "\">Gérer les partenaires</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</li>
@@ -211,6 +217,6 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 
     public function getDebugInfo()
     {
-        return array (  199 => 105,  196 => 104,  190 => 12,  176 => 106,  174 => 104,  124 => 57,  119 => 55,  114 => 53,  109 => 51,  101 => 46,  96 => 44,  91 => 42,  86 => 40,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
+        return array (  205 => 105,  202 => 104,  196 => 12,  182 => 106,  180 => 104,  136 => 63,  131 => 61,  124 => 57,  119 => 55,  114 => 53,  109 => 51,  101 => 46,  96 => 44,  91 => 42,  86 => 40,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
     }
 }
