@@ -122,9 +122,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // pr2_l_site_homepage
-        if ($pathinfo === '/pr2l/accueil') {
-            return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::accueilAction',  '_route' => 'pr2_l_site_homepage',);
+        if (0 === strpos($pathinfo, '/pr2l')) {
+            if (0 === strpos($pathinfo, '/pr2l/ac')) {
+                // pr2_l_site_homepage
+                if ($pathinfo === '/pr2l/accueil') {
+                    return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::accueilAction',  '_route' => 'pr2_l_site_homepage',);
+                }
+
+                // pr2_l_site_actionsEvenements
+                if ($pathinfo === '/pr2l/actionsEvenements') {
+                    return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::actionsEvenementsAction',  '_route' => 'pr2_l_site_actionsEvenements',);
+                }
+
+            }
+
+            // pr2_l_site_projet
+            if ($pathinfo === '/pr2l/projet') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::projetAction',  '_route' => 'pr2_l_site_projet',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

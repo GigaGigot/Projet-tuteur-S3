@@ -41,7 +41,10 @@ class __TwigTemplate_652740f0a1e8cc46a7fa90bb7a6783ec3749914205945a9fff522360e1f
 
 \t<h1>Le mot du président</h1>
 
-\t<img src=\"./image/photoMotPres.jpg\" id=\"motPresident\">
+\t<img src=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/images/photoMotPres.jpg"), "html", null, true);
+        echo "\" id=\"motPresident\">
 \t<p>Madame, Monsieur,</p>
 
 \t<p><em>2013 a été une année décisive pour le Pôle.</em>
@@ -85,6 +88,6 @@ class __TwigTemplate_652740f0a1e8cc46a7fa90bb7a6783ec3749914205945a9fff522360e1f
 
     public function getDebugInfo()
     {
-        return array (  39 => 8,  36 => 7,  29 => 5,);
+        return array (  46 => 13,  39 => 8,  36 => 7,  29 => 5,);
     }
 }

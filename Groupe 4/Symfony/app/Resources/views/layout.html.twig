@@ -4,16 +4,16 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/pr2lsite/css/styleSite.css') }}" />
-	<link rel="stylesheet" type="text/css" href="css/styleCMS.css" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/pr2lsite/css/styleCMS.css') }}" />
 	
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="{{ asset('bundles/pr2lsite/js/angular.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/pr2lsite/js/app.js') }}"></script>
     
     <title>{% block title %}PR2L{% endblock %}</title>
   </head>
   
   <header>
-  	<div class="eltEntete"><a href="">	<img src="/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/image/logo.png" alt="Logo PR2L" title="Logo association PR2L" />	</a></div>
+  	<div class="eltEntete"><a href="">	<img src="{{ asset('bundles/pr2lsite/images/logo.png') }}" alt="Logo PR2L" title="Logo association PR2L" />	</a></div>
 	<div class="eltEntete">
 		<strong></bold><em>P</em>ôle international de <br />
 		<em>R</em>essources de <br />
@@ -33,9 +33,9 @@
 <hr/>
 <div><nav>
 	<ul id="menu-deroulant">
-		<li><a href="index.php?page=1">PR2L</a> 
+		<li><a href="{{ 'accueil' }}">PR2L</a> 
 			<ul>
-				<li><a href="index.php?page=101">Le projet</a>
+				<li><a href="{{ 'projet' }}">Le projet</a>
 				</li>
 				<li><a href="index.php?page=102">Fondateurs</a>
 				</li>
@@ -50,7 +50,7 @@
 		<li>
 			<a href="index.php?page=2">ACTUALITES</a> 
 			<ul>
-				<li><a href="index.php?page=201">Action / Evènements</a>
+				<li><a href="{{ 'actionsEvenements' }}">Action / Evènements</a>
 				</li>
 				<li><a href="index.php?page=202">Quoi de neuf?</a>
 				</li>

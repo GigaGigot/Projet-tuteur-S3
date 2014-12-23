@@ -27,10 +27,19 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
         // line 6
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/css/styleSite.css"), "html", null, true);
         echo "\" />
-\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styleCMS.css\" />
+\t<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 7
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/css/styleCMS.css"), "html", null, true);
+        echo "\" />
 \t
-\t<script type=\"text/javascript\" src=\"js/angular.min.js\"></script>
-\t<script type=\"text/javascript\" src=\"js/app.js\"></script>
+\t<script type=\"text/javascript\" src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/js/angular.min.js"), "html", null, true);
+        echo "\"></script>
+\t<script type=\"text/javascript\" src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/js/app.js"), "html", null, true);
+        echo "\"></script>
     
     <title>";
         // line 12
@@ -39,7 +48,10 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
   </head>
   
   <header>
-  \t<div class=\"eltEntete\"><a href=\"\">\t<img src=\"/opt/lampp/htdocs/Symfony/src/PR2L/SiteBundle/Site PR2L/image/logo.png\" alt=\"Logo PR2L\" title=\"Logo association PR2L\" />\t</a></div>
+  \t<div class=\"eltEntete\"><a href=\"\">\t<img src=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/pr2lsite/images/logo.png"), "html", null, true);
+        echo "\" alt=\"Logo PR2L\" title=\"Logo association PR2L\" />\t</a></div>
 \t<div class=\"eltEntete\">
 \t\t<strong></bold><em>P</em>ôle international de <br />
 \t\t<em>R</em>essources de <br />
@@ -59,9 +71,15 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 <hr/>
 <div><nav>
 \t<ul id=\"menu-deroulant\">
-\t\t<li><a href=\"index.php?page=1\">PR2L</a> 
+\t\t<li><a href=\"";
+        // line 36
+        echo "accueil";
+        echo "\">PR2L</a> 
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"index.php?page=101\">Le projet</a>
+\t\t\t\t<li><a href=\"";
+        // line 38
+        echo "projet";
+        echo "\">Le projet</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"index.php?page=102\">Fondateurs</a>
 \t\t\t\t</li>
@@ -76,7 +94,10 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 \t\t<li>
 \t\t\t<a href=\"index.php?page=2\">ACTUALITES</a> 
 \t\t\t<ul>
-\t\t\t\t<li><a href=\"index.php?page=201\">Action / Evènements</a>
+\t\t\t\t<li><a href=\"";
+        // line 53
+        echo "actionsEvenements";
+        echo "\">Action / Evènements</a>
 \t\t\t\t</li>
 \t\t\t\t<li><a href=\"index.php?page=202\">Quoi de neuf?</a>
 \t\t\t\t</li>
@@ -169,6 +190,6 @@ class __TwigTemplate_4453dc18ce41f34f747edbf090a59fb79b379b951a871e45bedf99f09af
 
     public function getDebugInfo()
     {
-        return array (  157 => 105,  154 => 104,  148 => 12,  134 => 106,  132 => 104,  37 => 12,  28 => 6,  21 => 1,);
+        return array (  178 => 105,  175 => 104,  169 => 12,  155 => 106,  153 => 104,  99 => 53,  81 => 38,  76 => 36,  53 => 16,  46 => 12,  41 => 10,  37 => 9,  32 => 7,  28 => 6,  21 => 1,);
     }
 }

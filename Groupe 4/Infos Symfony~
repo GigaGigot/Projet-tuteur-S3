@@ -1,3 +1,7 @@
 Pour accéder aux fichiers des pages web : Symfony/app/Resources/views  et  Symfony/src/PR2L/SiteBundle/Resources/views
 
 Pour accéder aux pages par le navigateur : http://localhost/Projet-tuteur-S3/Groupe%204/Symfony/web/app_dev.php/pr2l/accueil
+
+Fichiers js, css, images : Symfony/web/bundles/pr2lsite
+
+Chemins pages créés : Symfony/src/PR2L/SiteBundle/Resources/config/routing.yml  et  

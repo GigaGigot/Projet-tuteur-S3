@@ -2,6 +2,14 @@ pr2_l_site_homepage:
     path:     /pr2l/accueil
     defaults: { _controller: PR2LSiteBundle:Default:accueil }
 
-#pr2_l_site_actions:
-#    path:     /pr2l/actions
-#    defaults: 
+pr2_l_site_actionsEvenements:
+    path:     /pr2l/actionsEvenements
+    defaults: { _controller: PR2LSiteBundle:Default:actionsEvenements }
+    
+pr2_l_site_projet:
+    path:     /pr2l/projet
+    defaults: { _controller: PR2LSiteBundle:Default:projet }
+    
+pr2_l_site_projet:
+    path:     /pr2l/fondateurs
+    defaults: { _controller: PR2LSiteBundle:Default:fondateurs }
