@@ -1,1 +1,0 @@
-Cette fonction n'est pas encore au point

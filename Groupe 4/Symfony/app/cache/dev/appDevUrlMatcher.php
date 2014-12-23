@@ -226,6 +226,39 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::recensementMutualiteAction',  '_route' => 'pr2_l_site_recensementMutualite',);
             }
 
+            // pr2_l_site_intranet
+            if ($pathinfo === '/pr2l/intranet') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::intranetAction',  '_route' => 'pr2_l_site_intranet',);
+            }
+
+            if (0 === strpos($pathinfo, '/pr2l/c')) {
+                // pr2_l_site_connexion
+                if ($pathinfo === '/pr2l/connexion') {
+                    return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::connexionAction',  '_route' => 'pr2_l_site_connexion',);
+                }
+
+                // pr2_l_site_creation
+                if ($pathinfo === '/pr2l/creation') {
+                    return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::creationAction',  '_route' => 'pr2_l_site_creation',);
+                }
+
+            }
+
+            // pr2_l_site_gestionAdmin
+            if ($pathinfo === '/pr2l/gestionAdmin') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::gestionAdminAction',  '_route' => 'pr2_l_site_gestionAdmin',);
+            }
+
+            // pr2_l_site_modification
+            if ($pathinfo === '/pr2l/modification') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::modificationAction',  '_route' => 'pr2_l_site_modification',);
+            }
+
+            // pr2_l_site_deconnexion
+            if ($pathinfo === '/pr2l/deconnexion') {
+                return array (  '_controller' => 'PR2L\\SiteBundle\\Controller\\DefaultController::deconnexionAction',  '_route' => 'pr2_l_site_deconnexion',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

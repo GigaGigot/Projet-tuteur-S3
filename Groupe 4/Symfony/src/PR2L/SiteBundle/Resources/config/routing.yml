@@ -78,7 +78,29 @@ pr2_l_site_recensementMutualite:
     path:     /pr2l/recensementMutualite
     defaults: { _controller: PR2LSiteBundle:Default:recensementMutualite }  
     
+pr2_l_site_intranet:
+    path:     /pr2l/intranet
+    defaults: { _controller: PR2LSiteBundle:Default:intranet }  
     
+pr2_l_site_connexion:
+    path:     /pr2l/connexion
+    defaults: { _controller: PR2LSiteBundle:Default:connexion }
+    
+pr2_l_site_creation:
+    path:     /pr2l/creation
+    defaults: { _controller: PR2LSiteBundle:Default:creation }
+    
+pr2_l_site_gestionAdmin:
+    path:     /pr2l/gestionAdmin
+    defaults: { _controller: PR2LSiteBundle:Default:gestionAdmin }
+    
+pr2_l_site_modification:
+    path:     /pr2l/modification
+    defaults: { _controller: PR2LSiteBundle:Default:modification }
+    
+pr2_l_site_deconnexion:
+    path:     /pr2l/deconnexion
+    defaults: { _controller: PR2LSiteBundle:Default:deconnexion }
     
     
     

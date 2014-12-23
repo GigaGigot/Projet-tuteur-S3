@@ -105,6 +105,36 @@ class DefaultController extends Controller
     {
         return $this->render('PR2LSiteBundle:Default:recensementMutualite.html.twig');
     }
+    
+    public function intranetAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:intranet.html.twig');
+    }
+    
+    public function connexionAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:connexion.html.twig');
+    }
+    
+    public function creationAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:creation.html.twig');
+    }
+    
+    public function gestionAdminAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:gestionAdmin.html.twig');
+    }
+    
+    public function modificationAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:modification.html.twig');
+    }
+    
+    public function deconnexionAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:deconnexion.html.twig');
+    }
 }
 
 
