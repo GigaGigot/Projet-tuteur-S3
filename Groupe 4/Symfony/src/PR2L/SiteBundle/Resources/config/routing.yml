@@ -45,3 +45,42 @@ pr2_l_site_partenaires:
 pr2_l_site_gererPartenaires:
     path:     /pr2l/gererPartenaires
     defaults: { _controller: PR2LSiteBundle:Default:gererPartenaires }
+    
+pr2_l_site_ressources:
+    path:     /pr2l/ressources
+    defaults: { _controller: PR2LSiteBundle:Default:ressources }
+    
+pr2_l_site_archives:
+    path:     /pr2l/archives
+    defaults: { _controller: PR2LSiteBundle:Default:archives }
+    
+pr2_l_site_bibliotheque:
+    path:     /pr2l/bibliotheque
+    defaults: { _controller: PR2LSiteBundle:Default:bibliotheque }
+    
+pr2_l_site_travauxRecherche:
+    path:     /pr2l/travauxRecherche
+    defaults: { _controller: PR2LSiteBundle:Default:travauxRecherche }
+    
+pr2_l_site_publications:
+    path:     /pr2l/publications
+    defaults: { _controller: PR2LSiteBundle:Default:publications } 
+        
+pr2_l_site_liensUtiles:
+    path:     /pr2l/liensUtiles
+    defaults: { _controller: PR2LSiteBundle:Default:liensUtiles }     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -65,4 +65,73 @@ class DefaultController extends Controller
     {
         return $this->render('PR2LSiteBundle:Default:gererPartenaires.html.twig');
     }
+    
+    public function ressourcesAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:ressources.html.twig');
+    }
+    
+    public function archivesAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:archives.html.twig');
+    }
+    
+    public function bibliothequeAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:bibliotheque.html.twig');
+    }
+    
+    public function travauxRechercheAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:travauxRecherche.html.twig');
+    }
+    
+    public function publicationsAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:publications.html.twig');
+    }
+    
+    public function liensUtilesAction()
+    {
+        return $this->render('PR2LSiteBundle:Default:liensUtiles.html.twig');
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
