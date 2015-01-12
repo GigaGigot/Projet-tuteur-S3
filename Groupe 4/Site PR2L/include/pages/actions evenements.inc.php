@@ -56,22 +56,22 @@
 					<div ng-repeat="element in artCtrl.article.elements">
 						<div ng-switch on="element.type">
 							<div ng-switch-when="Titre">
-								<h3>{{element.contenu}}</h3>
+								<h3>{[{element.contenu}]}</h3>
 							</div>
 							<div ng-switch-when="Auteur">
-								<font color="grey">Par {{element.contenu}}</font>
+								<font color="grey">Par {[{element.contenu}]}</font>
 							</div>
 							<div ng-switch-when="Date">
-								<i>Le {{element.contenu}}</i>
+								<i>Le {[{element.contenu}]}</i>
 							</div>
 							<div ng-switch-when="Paragraphe">
-								<p>&nbsp&nbsp&nbsp{{element.contenu}}</p>
+								<p>&nbsp&nbsp&nbsp{[{element.contenu}]}</p>
 							</div>
 							<div ng-switch-when="Image">
-								<img src="{{element.contenu}}">
+								<img src="{[{element.contenu}]}">
 							</div>
 							<div ng-switch-when="Lien">
-								<a href="{{element.contenu}}" target="_blank">{{element.contenu}}</a>
+								<a href="{[{element.contenu}]}" target="_blank">{[{element.contenu}]}</a>
 							</div>
 						</div>
 					</div>
@@ -84,22 +84,22 @@
 				<div ng-repeat="element in article.elements">
 					<div ng-switch on="element.type">
 						<div ng-switch-when="Titre">
-							<h3>{{element.contenu}}</h3>
+							<h3>{[{element.contenu}]}</h3>
 						</div>
 						<div ng-switch-when="Auteur">
-							<font color="grey">Par {{element.contenu}}</font>
+							<font color="grey">Par {[{element.contenu}]}</font>
 						</div>
 						<div ng-switch-when="Date">
-							<i>Le {{element.contenu}}</i>
+							<i>Le {[{element.contenu}]}</i>
 						</div>
 						<div ng-switch-when="Paragraphe">
-							<p>&nbsp&nbsp&nbsp{{element.contenu}}</p>
+							<p>&nbsp&nbsp&nbsp{[{element.contenu}]}</p>
 						</div>
 						<div ng-switch-when="Image">
-							<img src="{{element.contenu}}">
+							<img src="{[{element.contenu}]}">
 						</div>
 						<div ng-switch-when="Lien">
-							<a href="{{element.contenu}}" target="_blank">{{element.contenu}}</a>
+							<a href="{[{element.contenu}]}" target="_blank">{[{element.contenu}]}</a>
 						</div>
 					</div>
 				</div>

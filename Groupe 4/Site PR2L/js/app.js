@@ -1,4 +1,7 @@
-var app = angular.module('CMS', []);
+var app = angular.module('CMS', []).config(['$interpolateProvider', function ($interpolateProvider) {
+    $interpolateProvider.startSymbol('{[{');
+    $interpolateProvider.endSymbol('}]}');
+  }]);
 
 app.controller('CMSController', function($scope, $http) {
   $http.get('json/data.json')
