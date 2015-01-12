@@ -9,7 +9,7 @@ require_once("include/header.inc.php");
  
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" ng-app="CMS">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 	
 	<head>
 		<?php require_once("include/head.inc.php"); ?>
@@ -27,7 +27,7 @@ require_once("include/header.inc.php");
 		<?php require_once("include/menu.inc.php"); ?>
 	</nav>
 	
-	<body class="cadre" ng-controller="CMSController">
+	<body>
 			<?php require_once("include/texte.inc.php"); ?>
 	</body>
 	
